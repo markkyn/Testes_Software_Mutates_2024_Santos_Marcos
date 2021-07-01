@@ -8,7 +8,11 @@
       "History",
       "Choose Function",
       "Parse Additional Function",
-      "Display History"
+      "Display History",
+      "Addition",
+      "Subtraction",
+      "Multiplication",
+      "Division"
     ],
     "collaborators": [
       "ExponentialFunction",
