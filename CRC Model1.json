@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Calculator",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "History",
+      "Choose Function",
+      "Display History"
+    ],
+    "collaborators": [
+      "ExponentialFunction",
+      "Arccos",
+      "Log",
+      "MAD",
+      "StandardDeviation",
+      "Sinh",
+      "SpecialExponentialFunction"
+    ]
+  },
+  {
+    "name": "ExponentialFunction",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Multiplier Number",
+      "Base Number",
+      "Exponent",
+      "Answer",
+      "Calculate Answer",
+      "Get Superscript"
+    ],
+    "collaborators": [
+      "Calculator"
+    ]
+  }
+]
