@@ -122,6 +122,7 @@ class ExponentialFunction:
                 else :
                     i = 2
                     tempDen = den
+                    d = 0.0
                     while (ExponentialFunction.represent_int(tempDen) == False) :
                         d = float(den)
                         d *= i
@@ -141,6 +142,7 @@ class ExponentialFunction:
             else :
                 i = 2
                 tempNum = num
+                n = 0.0
                 while (ExponentialFunction.represent_int(tempNum) == False) :
                     n = float(num)
                     n *= i
@@ -201,6 +203,7 @@ class ExponentialFunction:
         else :
             i = 2
             tempExp = self.exp_num
+            e = 0.0
             while (ExponentialFunction.represent_int(tempExp) == False) :
                 e = float(self.exp_num)
                 e *= i
