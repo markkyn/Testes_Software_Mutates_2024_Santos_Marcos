@@ -112,10 +112,12 @@ class ExponentialFunction:
                     # since exponent is fraction, the denominator represents a root function
                     # since anything to the power of 1/# is a root function
                     # use get_root to determine the new base_num
-                    self.base_num = ExponentialFunction.get_root(d, self.base_num)
-                    # then update exp_num with num before calling calculate_answer
-                    self.exp_num = num
-                    return ExponentialFunction.calculate_answer(self)
+                    base_num = ExponentialFunction.get_root(d, self.base_num)
+                    # then have new exp_num with num before calling calculate_answer
+                    exp_num = num
+                    self.answer = ExponentialFunction.calculate_answer(ExponentialFunction(
+                                                        self.mult_num, base_num, exp_num, self.answer))
+                    return self.answer
                 
                 # if den is a decimal, then multiply it by increment i until it is an integer
                 # tempDen will temporarily store the variable den
@@ -130,12 +132,14 @@ class ExponentialFunction:
                         tempDen = str(d)
                     # Once den becomes an integer, use get_root to determine the new den root of 
                     # base_num 
-                    self.base_num = ExponentialFunction.get_root(int(d), self.base_num)
+                    base_num = ExponentialFunction.get_root(int(d), self.base_num)
                     # then multiply numerator by i - 1 to keep the exponent equal
                     # since we multiplied the denominator, we have to multiply numerator as well
                     n = int(num) * (i - 1)
-                    self.exp_num = str(n)
-                    return ExponentialFunction.calculate_answer(self)
+                    exp_num = str(n)
+                    self.answer = ExponentialFunction.calculate_answer(ExponentialFunction(
+                                                        self.mult_num, base_num, exp_num, self.answer))
+                    return self.answer
             
             # if num is a decimal, then it will have to be updated as well
             # tempNum will temporarily store the variable num
@@ -153,10 +157,12 @@ class ExponentialFunction:
                     # den is multiplied by i since num was converted to an int
                     d = int(den) * (i - 1)
                     # use get_root to determine the new base_num
-                    self.base_num = ExponentialFunction.get_root(d, self.base_num)
+                    base_num = ExponentialFunction.get_root(d, self.base_num)
                     # then update exp_num with tempNum before calling calculate_answer
-                    self.exp_num = tempNum
-                    return ExponentialFunction.calculate_answer(self)
+                    exp_num = tempNum
+                    self.answer = ExponentialFunction.calculate_answer(ExponentialFunction(
+                                                        self.mult_num, base_num, exp_num, self.answer))
+                    return self.answer
                 
                 # if den is a decimal, it will need to be converted as well
                 # since num was converted to an integer, den is multiplied by the value of i - 1
@@ -172,11 +178,13 @@ class ExponentialFunction:
                         tempDen = str(d)
                     # Once den becomes an integer, use get_root to determine the new den root of 
                     # base_num 
-                    self.base_num = ExponentialFunction.get_root(int(d), self.base_num)
+                    base_num = ExponentialFunction.get_root(int(d), self.base_num)
                     # Then updated exp_num by n and j before calling calculate_answer
                     temp = int(n) * (j - 1)
-                    self.exp_num = str(temp)
-                    return ExponentialFunction.calculate_answer(self)
+                    exp_num = str(temp)
+                    self.answer = ExponentialFunction.calculate_answer(ExponentialFunction(
+                                                        self.mult_num, base_num, exp_num, self.answer))
+                    return self.answer
         
         # Then check that exp_num is an integer using represent_int
         elif (ExponentialFunction.represent_int(self.exp_num)) :
@@ -210,18 +218,20 @@ class ExponentialFunction:
                 i += 1
                 tempExp = str(e)
             # Once exp_num is an integer, use get_root to get new base after multiplying exponent
-            self.base_num = ExponentialFunction.get_root(int(e), self.base_num)
+            base_num = ExponentialFunction.get_root((i - 1), self.base_num)
             # Then update exp_num by i - 1 and call calculate_answer
-            temp = i - 1
-            self.exp_num = str(temp)
-            return ExponentialFunction.calculate_answer(self)
+            temp = e
+            exp_num = str(temp)
+            self.answer = ExponentialFunction.calculate_answer(ExponentialFunction(
+                                                        self.mult_num, base_num, exp_num, self.answer))
+            return self.answer
   
     # get_super method is used to print exponents 
     # source: https://www.geeksforgeeks.org/how-to-print-superscript-and-subscript-in-python/
     # function converts passed string x to superscript
     def get_super(x):
-        normal = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-=()."
-        super_s = "ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾."
+        normal = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-=()"
+        super_s = "ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾"
         res = x.maketrans(''.join(normal), ''.join(super_s))
         return x.translate(res)
         
