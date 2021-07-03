@@ -24,6 +24,37 @@ class ExponentialFunction:
     # set_Exp_Num sets the value of exp_num
     def set_exp_num(self, eNum):
         self.exp_num = eNum
+        
+    def set_values(self):
+        # Display format of Exponential Function
+        print('ab' + ExponentialFunction.get_super('x'))
+
+        # Ask the user to input the value for a
+        mNum = input("Enter value for a: ")
+
+        # If the user enters a fraction, then split into numerator and denominator
+        # And pass the value of num/den in set_mult_num
+        if '/' in mNum:
+            num, den = mNum.split('/')
+            self.set_mult_num(float(num)/float(den))
+
+        # Else, pass mNum as float
+        else :
+            self.set_mult_num(float(mNum))
+
+        # Then ask the user to enter the value for b, and perform the same checks
+        bNum = input("Enter value for b: ")
+
+        if '/' in bNum:
+            num, den = bNum.split('/')
+            self.set_base_num(float(num)/float(den))
+    
+        else :
+            self.set_base_num(float(bNum))
+
+        # Ask the user to enter the value for x
+        eNum = input("Enter value for x: ")
+        self.set_exp_num(eNum)
     
     # represent_int is used to determine if passed string is integer or not   
     def represent_int(s):
