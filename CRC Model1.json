@@ -34,6 +34,12 @@
       "Base Number",
       "Exponent",
       "Answer",
+      "Set Multiplier Number",
+      "Set Base Number",
+      "Set Exponent",
+      "Set Values",
+      "Get Root",
+      "Represent As Int",
       "Calculate Answer",
       "Get Superscript"
     ],
