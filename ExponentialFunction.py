@@ -258,8 +258,9 @@ class ExponentialFunction:
             return self.answer
   
     # get_super method is used to print exponents 
-    # source: https://www.geeksforgeeks.org/how-to-print-superscript-and-subscript-in-python/
     # function converts passed string x to superscript
+    # GeeksforGeeks (2021) get_super source code (Version 1.0) [Source code].
+    #     https://www.geeksforgeeks.org/how-to-print-superscript-and-subscript-in-python/
     def get_super(x):
         normal = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-=()"
         super_s = "ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾"
