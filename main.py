@@ -418,8 +418,7 @@ class Calculator:
                 self.choose_function(1)
             
             for i in (self.history):
-                print(i)
-                print()
+                print(i + + "\n")
             input("Press Enter to continue:")
             self.choose_function(0)
         
