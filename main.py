@@ -1,7 +1,7 @@
 # import the ExponentialFunction class to use the ExponentialFunction
 from ExponentialFunction import ExponentialFunction
 # import array to use the array object
-import array as arr
+import array
 
 # Calculator class is the main class where user can choose the desired function
 class Calculator:
@@ -18,17 +18,23 @@ class Calculator:
         values = []
         # num is the input from the user
         num = ""
-        num  = input("Enter value to be added, Enter '=' when all values entered: ")
+        num  = input("Enter value to be added, Enter '=' when all values " 
+                      "entered: ")
         # The user can enter as many values as they want
-        # Once they've entered all their values, the user enters = to get the answer
+        # Once they've entered all their values, the user enters = to get the 
+        # answer
         while "=" not in num:
             values.append(float(num))
-            num  = input("Enter value to be added, Enter '=' when all values entered: ")
-        # sum is used to store the final answer, it is assigned the first value in values
-        # answer is used to store the work for the addition, which is later stored in history
+            num  = input("Enter value to be added, Enter '=' when all values " 
+                          "entered: ")
+        # sum is used to store the final answer, it is assigned the first value 
+        # in values
+        # answer is used to store the work for the addition, which is later 
+        # stored in history
         sum = values[0]
         answer = str(sum)
-        # The values entered are added, while the answer string is updated with each value
+        # The values entered are added, while the answer string is updated with 
+        # each value
         for i in range(1, len(values)):
             sum += values[i]
             answer = answer + " + " + str(values[i])
@@ -42,16 +48,19 @@ class Calculator:
         values = []
         # num is the input from the user
         num = ""
-        num  = input("Enter value to be subtracted, Enter '=' when all values entered: ")
+        num  = input("Enter value to be subtracted, Enter '=' when all values " 
+                      "entered: ")
         # The user can enter as many values as they want
         while "=" not in num:
             values.append(float(num))
-            num  = input("Enter value to be subtracted, Enter '=' when all values entered: ")
+            num  = input("Enter value to be subtracted, Enter '=' when all " 
+                          "values entered: ")
         # diff is used to store the answer of the subtraction
-        # it is assigned the first value of the array values
+        # It is assigned the first value of the array values
         diff = values[0]
         answer = str(diff)
-        # The values entered are subtracted, while the answer string is updated with each value
+        # The values entered are subtracted, while the answer string is updated 
+        # with each value
         for i in range(1, len(values)):
            diff -= values[i]
            answer = answer + " - " + str(values[i])
@@ -64,16 +73,19 @@ class Calculator:
         values = []
         # num is the input from the user
         num = ""
-        num  = input("Enter value to be multiplied, Enter '=' when all values entered: ")
+        num  = input("Enter value to be multiplied, Enter '=' when all values " 
+                      "entered: ")
         # The user can enter as many values as they want
         while "=" not in num:
             values.append(float(num))
-            num  = input("Enter value to be multiplied, Enter '=' when all values entered: ")
+            num  = input("Enter value to be multiplied, Enter '=' when all " 
+                          "values entered: ")
         # mult is used to store the answer of the multiplication
         # It is initally assigned the first value of the values array 
         mult = values[0]
         answer = str(mult)
-        # The values entered are multiplied, while the answer string is updated with each value
+        # The values entered are multiplied, while the answer string is updated 
+        # with each value
         for i in range(1, len(values)):
             mult *= values[i]
             answer = answer + " x " + str(values[i])
@@ -87,18 +99,21 @@ class Calculator:
         values = []
         # num is the input from the user
         num = ""
-        num  = input("Enter value to be divided, Enter '=' when all values entered: ")
+        num  = input("Enter value to be divided, Enter '=' when all values " 
+                      "entered: ")
         # The user can enter as many values as they want
         while "=" not in num:
             values.append(float(num))
-            num  = input("Enter value to be divided, Enter '=' when all values entered: ")
+            num  = input("Enter value to be divided, Enter '=' when all values" 
+                          " entered: ")
         # div is used to store the answer of the division
         # It is initially assigned the first value of the values array
         div = values[0]
         answer = str(div)
-        # The values entered are divided, while the answer string is updated with each value
+        # The values entered are divided, while the answer string is updated 
+        # with each value
         for i in range(1, len(values)):
-            # if the user tries to divide by zero, the function will exit
+            # If the user tries to divide by zero, the function will exit
             try:
                 div /= values[i]
                 answer = answer + " / " + str(values[i]) 
@@ -109,13 +124,14 @@ class Calculator:
         # The answer is then returned
         return answer
     
-    # The parse_function method is used to perform two or more types of operations
+    # The parse_function method is used to perform two or more types of 
+    # operations
     # It has 2 paramters
     # current_result represents the current answer from the previous function
     # current_str represents the current string of the previous function
     def parse_function(self, current_result, current_str):
-        # The user is first asked if they want to either
-        # add a function, subtract a function, multiply a function, or divide a function
+        # The user is first asked if they want to either add a function, 
+        # subtract a function, multiply a function, or divide a function
         print("Please choose one of the following choices: ")
         print("1. Add another function")
         print("2. Subtract another function")
@@ -124,7 +140,8 @@ class Calculator:
         parse = input("Enter the value of choice you would like: ")
         print()
         
-        # If the user enters an invalid number, the system asks for another input
+        # If the user enters an invalid number, the system asks for another 
+        # input
         while(int(parse) < 1 or int(parse) > 4):
             parse = input("Invalid input, Please enter a new value: ")
             print()
@@ -134,49 +151,55 @@ class Calculator:
         # Which will then be added to the current_value
         result = self.choose_function(1)
         
-        # The result is returned as a string, so it is broken up into values and answer
+        # The result is returned as a string, so it is broken up into values 
+        # and answer
         new_values, new_answer = result.split(" = ")
         # The same for the current_str as well
         current_values, current_answer = current_str.split(" = ")
         
         # The values are then added based on the choice made for parse
-        # if parse == 1, then the user wanted to add a new function
+        # If parse == 1, then the user wanted to add a new function
         if (int(parse) == 1):
             values = current_values + " + " + new_values
             answer = current_result + float(new_answer)
-            # function stores the new string for history
+            # Function stores the new string for history
             function = values + " = " + str(answer)
-            # The new value is displayed and the user is asked again if they want to
-            # parse another function
+            # The new value is displayed and the user is asked again if they 
+            # want to parse another function
             print(function)
             print()
-            parse = input("Would you like to parse another function (Y or N): ")
-            # If the user enters Y, then parse_function is called again with the new
-            # answer
+            parse = input("Would you like to parse another function "
+                           "(Y or N) ")
+            # If the user enters Y, then parse_function is called again with 
+            # the new answer
             if(parse.casefold() == "Y".casefold()):
                 self.parse_function(answer, function)
-            # Else, the function is saved in history and choose_function is called again
+            # Else, the function is saved in history and choose_function is 
+            # called again
             else:
                 self.history.append(function)
                 self.choose_function(0)
       
-        # The same thing is done for the choices of subtraction, multiplication and division
+        # The same thing is done for the choices of subtraction, multiplication 
+        # and division
         # If parse == 2, then the new fucntion is subtracted from the old
         elif(int(parse) == 2):
             values = current_values + " - " + new_values
             answer = current_result - float(new_answer)
-            # function stores the new string for history
+            # Function stores the new string for history
             function = values + " = " + str(answer)
-            # The new value is displayed and the user is asked again if they want to
-            # parse another function
+            # The new value is displayed and the user is asked again if they 
+            # want to parse another function
             print(function)
             print()
-            parse = input("Would you like to parse another function (Y or N): ")
-            # If the user enters Y, then parse_function is called again with the new
-            # answer
+            parse = input("Would you like to parse another function "
+                           "(Y or N): ")
+            # If the user enters Y, then parse_function is called again with 
+            # the new answer
             if(parse.casefold() == "Y".casefold()):
                 self.parse_function(answer, function)
-            # Else, the function is saved in history and choose_function is called again
+            # Else, the function is saved in history and choose_function is 
+            # called again
             else:
                 self.history.append(function)
                 self.choose_function(0)
@@ -185,18 +208,20 @@ class Calculator:
         elif(int(parse) == 3):
             values = current_values + " x " + new_values
             answer = current_result * float(new_answer)
-            # function stores the new string for history
+            # Function stores the new string for history
             function = values + " = " + str(answer)
-            # The new value is displayed and the user is asked again if they want to
-            # parse another function
+            # The new value is displayed and the user is asked again if they 
+            # want to parse another function
             print(function)
             print()
-            parse = input("Would you like to parse another function (Y or N): ")
-            # If the user enters Y, then parse_function is called again with the new
-            # answer
+            parse = input("Would you like to parse another function "
+                           "(Y or N): ")
+            # If the user enters Y, then parse_function is called again with 
+            # the new answer
             if(parse.casefold() == "Y".casefold()):
                 self.parse_function(answer, function)
-            # Else, the function is saved in history and choose_function is called again
+            # Else, the function is saved in history and choose_function is 
+            # called again
             else:
                 self.history.append(function)
                 self.choose_function(0)
@@ -204,24 +229,27 @@ class Calculator:
         # If parse == 4, the new function is divided to the old one
         else:
             values = current_values + " / " + new_values
-            # try to divide the values, but if it's divide by zero, catch exception
+            # Try to divide the values, but if it's divide by zero, catch 
+            # exception
             try:
                 answer = current_result / float(new_answer)
             except ZeroDivisionError:
                 print("Can't divide by zero, function will exit")
                 self.choose_function(0)
-            # function stores the new string for history
+            # Function stores the new string for history
             function = values + " = " + str(answer)
-            # The new value is displayed and the user is asked again if they want to
-            # parse another function
+            # The new value is displayed and the user is asked again if they 
+            # want to parse another function
             print(function)
             print()
-            parse = input("Would you like to parse another function (Y or N): ")
-            # If the user enters Y, then parse_function is called again with the new
-            # answer
+            parse = input("Would you like to parse another function "
+                           "(Y or N): ")
+            # If the user enters Y, then parse_function is called again with 
+            # the new answer
             if(parse.casefold() == "Y".casefold()):
                 self.parse_function(answer, function)
-            # Else, the function is saved in history and choose_function is called again
+            # Else, the function is saved in history and choose_function is 
+            # called again
             else:
                 self.history.append(function)
                 self.choose_function(0)
@@ -231,7 +259,8 @@ class Calculator:
     # special functions implemented
     # The second paramter is used when parsing a function
     # If parse = 0, then choose_function operates normally
-    # If parse = 1, then choose_function returns the value of the chosen fucntion
+    # If parse = 1, then choose_function returns the value of the chosen 
+    # fucntion
     # So it can then be parsed with a previously chosen function
     def choose_function(self, parse):
         print("Please choose one of the following functions")
@@ -249,7 +278,8 @@ class Calculator:
         print("12. Display History")
         print("13. Exit Calculator")
         
-        choice = input("Enter the number of the function you would like to use: ")
+        choice = input("Enter the number of the function you would like to " 
+                        "use: ")
         print()
         
         # If the user enters an invalid number, it asks for input again
@@ -261,12 +291,14 @@ class Calculator:
         if(int(choice) == 1):
             result = self.addition()
         
-            # if parse == 1, then choose_function returns the value of result
+            # If parse == 1, then choose_function returns the value of result
             if(parse == 1):
                 return result
             
-            # The user is then asked if they want to parse this function with another
-            parse = input("Would you like to parse another function (Y or N): ")
+            # The user is then asked if they want to parse this function with 
+            # another
+            parse = input("Would you like to parse another function "
+                           "(Y or N): ")
             print()
             # If the user wants to parse a function, parse_function is called 
             # and the answer of the previous function is taken from result
@@ -283,16 +315,19 @@ class Calculator:
                 self.choose_function(0)
         
         # If the user enters 2, the subtraction function is called
-        # It follows the same format as the addition function, now using subtraction
+        # It follows the same format as the addition function, now using 
+        # subtraction
         elif(int(choice) == 2):
             result = self.subtraction()
             
-            # if parse == 1, then choose_function returns the value of result
+            # If parse == 1, then choose_function returns the value of result
             if(parse == 1):
                 return result
             
-            # The user is then asked if they want to parse this function with another
-            parse = input("Would you like to parse another function (Y or N): ")
+            # The user is then asked if they want to parse this function with 
+            # another
+            parse = input("Would you like to parse another function "
+                           "(Y or N): ")
             print()
             # If the user wants to parse a function, parse_function is called 
             # and the answer of the previous function is taken from result
@@ -312,12 +347,14 @@ class Calculator:
         elif(int(choice) == 3):
             result = self.multiplication()
             
-            # if parse == 1, then choose_function returns the value of result
+            # If parse == 1, then choose_function returns the value of result
             if(parse == 1):
                 return result
             
-           # The user is then asked if they want to parse this function with another
-            parse = input("Would you like to parse another function (Y or N): ")
+           # The user is then asked if they want to parse this function with 
+           # another
+            parse = input("Would you like to parse another function "
+                           "(Y or N): ")
             print()
             # If the user wants to parse a function, parse_function is called 
             # and the answer of the previous function is taken from result
@@ -337,12 +374,14 @@ class Calculator:
         elif(int(choice) == 4):
             result = self.division()
 
-            # if parse == 1, then choose_function returns the value of result
+            # If parse == 1, then choose_function returns the value of result
             if(parse == 1):
                 return result
             
-            # The user is then asked if they want to parse this function with another
-            parse = input("Would you like to parse another function (Y or N): ")
+            # The user is then asked if they want to parse this function with 
+            # another
+            parse = input("Would you like to parse another function "
+                           "(Y or N): ")
             print()
             # If the user wants to parse a function, parse_function is called 
             # and the answer of the previous function is taken from result
@@ -368,25 +407,34 @@ class Calculator:
             function.set_values()
             result = function.calculate_answer()
             
-            # if parse == 1, then choose_function returns the value of result
-            if(parse == 1):
-                return str(function)
+            # If result == None, then an error occured
+            if (result == None):
+                print("ERROR Division by Zero\n")
                 
-            # The user is then asked if they want to parse this function with another
-            parse = input("Would you like to parse another function (Y or N): ")
-            print()
-            # If the user wants to parse a function, parse_function is called 
-            # and the answer of the previous function is taken from result
-            if (parse.casefold() == "Y".casefold()):
-                self.parse_function(result, str(function))
-    
-            # Else, the resukt is displayed
             else:
-                print(function)
-                self.history.append(str(function))
-                input("Press Enter to continue:")
+                # If parse == 1, then choose_function returns the value of 
+                # result
+                if(parse == 1):
+                    return str(function)
+                
+                # The user is then asked if they want to parse this function 
+                # with another
+                parse = input("Would you like to parse another function " 
+                               "(Y or N): ")
                 print()
-                self.choose_function(0)
+                # If the user wants to parse a function, parse_function is called 
+                # and the answer of the previous function is taken from result
+                if (parse.casefold() == "Y".casefold()):
+                    self.parse_function(result, str(function))
+    
+                # Else, the resukt is displayed
+                else:
+                    print(function)
+                    self.history.append(str(function))
+            
+            input("Press Enter to continue:")
+            print()
+            self.choose_function(0)
         
         # If the user enters 7, log function is called    
         elif(int(choice) == 7):
@@ -411,14 +459,14 @@ class Calculator:
         # If the user enters 12, the current history of the Calculator is displayed    
         elif(int(choice) == 12):
             
-            # if parse == 1, then the user should have chosen a function
+            # If parse == 1, then the user should have chosen a function
             # choose_function is then called again
             if(parse == 1):
                 print("Please choose a function to parse!")
                 self.choose_function(1)
             
             for i in (self.history):
-                print(i + + "\n")
+                print(i + "\n")
             input("Press Enter to continue:")
             self.choose_function(0)
         
