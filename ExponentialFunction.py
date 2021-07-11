@@ -73,11 +73,11 @@ class ExponentialFunction:
             # else, return False
             return False
             
-    # root function is used to find root value when not a perfect root
+    # special_root function is used to find root value when not a perfect root
     # root is the specific root to find, square, cube, etc.
     # num is the value to be rooted
     # i and j represent the range of values that will be searched for root
-    def Root(root, num, i, j):
+    def special_root(root, num, i, j):
         # start at middle of range
         mid = (i + j)/2
         n = mid
@@ -91,11 +91,11 @@ class ExponentialFunction:
             
         # Else if n > num, then call root again, but between i and mid
         elif (n > num) :
-            return ExponentialFunction.Root(root, num, i, mid)
+            return ExponentialFunction.special_root(root, num, i, mid)
         
         # Else, return root between mid and j
         else :
-            return ExponentialFunction.Root(root, num, mid, j)
+            return ExponentialFunction.special_root(root, num, mid, j)
         
     # get_root function is used to find the specific root of the passed value
     # root is the specific root, whether it be square, cube, etc.
@@ -120,7 +120,7 @@ class ExponentialFunction:
             # if n > num, then num is not a perfect root, and need to call recursive function root
             # Know that root lies within interval of i and i - 1
             elif (n > num) :
-                i = ExponentialFunction.Root(root, num, i - 1, i)
+                i = ExponentialFunction.special_root(root, num, i - 1, i)
                 return i
             
             # increment i by 1 each time
