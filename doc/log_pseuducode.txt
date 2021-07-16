@@ -1,0 +1,22 @@
+function ln_helper(x):
+
+	If x is greater or equal to 1:
+		return ln_helper(x/2) – ln_helper(1/2)
+	else if x less than 0.5:
+		return ln_helper(2*x) + ln_helper(1/2)
+
+	n = 10000
+	sum = 0
+
+	for i in the range between i and n:
+
+		Sum = sum + (-1) ^ (i+1) * ((x-1) ^ i) / i
+
+	return sum
+
+function cal_log():
+	
+	if argument is greater than 0 and base number is greater than 0 but not equal to 1:
+		result = ln_helper(argument) / ln_helper(base number)
+
+	return result
