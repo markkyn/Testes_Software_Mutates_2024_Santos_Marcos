@@ -17,69 +17,62 @@ class ExponentialFunction:
     def set_mult_num(self, mNum):
         # If the mNum is a fraction, then split into numerator and denominator
         # Then set mult_num to numerator/denominator
+        # If there is a division by zero, the exception is caught and the
+        # function returns None
         if '/' in mNum:
-            num, den = mNum.split('/')
-            self.mult_num = float(num)/float(den)
-
+            try:
+                num, den = mNum.split('/')
+                self.mult_num = float(num)/float(den)
+                return self.mult_num
+            except ZeroDivisionError:
+                return None
         # Else, set mult_num to float of mNum
         else:
             self.mult_num = float(mNum)
+            return self.mult_num
   
     #set_Base_Num sets the value of base_num
     def set_base_num(self, bNum):
         # If bNum is a fraction, then split into numerator and denominator
+        # If there is a division by zero, the exception is caught and
+        # The function returns None
         if '/' in bNum:
-            num, den = bNum.split('/')
-            self.base_num = float(num)/float(den)
+            try:
+                num, den = bNum.split('/')
+                self.base_num = float(num)/float(den)
+                return self.base_num
+            except ZeroDivisionError:
+                return None
         # Else, set base_num to float of bNum
         else:
             self.base_num = float(bNum)
+            return self.base_num
 
     # set_Exp_Num sets the value of exp_num
     def set_exp_num(self, eNum):
-        self.exp_num = eNum
-        
-    def set_values(self):
-        # Display format of Exponential Function
-        print('ab' + ExponentialFunction.get_super('x'))
-
-        # Ask the user to input the value for a
-        mNum = input("Enter value for a: ")
-        self.set_mult_num(mNum)
-
-        # Then ask the user to enter the value for b, and perform the same 
-        # checks
-        bNum = input("Enter value for b: ")
-        self.set_base_num(bNum)
-
-        # Ask the user to enter the value for x
-        eNum = input("Enter value for x: ")
-        self.set_exp_num(eNum)
+        # If eum is a fraction, then split into numerator and denominator
+        # If there is a division by zero, the exception is caught and
+        # The function returns None
+        if '/' in eNum:
+            try:
+                num, den = eNum.split('/')
+                self.exp_num = float(num)/float(den)
+                return self.exp_num
+            except ZeroDivisionError:
+                return None
+        # Else, set exp_num to float of bNum
+        else:
+            self.exp_num = float(eNum)
+            return self.exp_num
 
     # calculate_answer is used to calculate the final answer from the input 
     # values
     # Since Python has a exponential arithmetic operator, that will be used
     def calculate_answer(self):
-        # First have to convert exp_num to a value since it is still a string
-        # If exp_num is a fraction, then break it into numerator and 
-        # denomintaor and calculate answer
-        if '/' in self.exp_num:
-            num, den = self.exp_num.split('/')
-            # Division by zero is handled by trying to divide numerator and
-            # denominator and catching a ZeroDivisionError error
-            try:
-                exp = float(num)/float(den)
-                self.answer = (self.mult_num)*(self.base_num**exp)
-                return self.answer
-            # If the denominator is 0, the function returns None
-            except ZeroDivisionError:
-                return None
-        # Else, the exp_num is assumed to be an integer or float and is 
-        # converted
-        else:
-            exp = float(self.exp_num)
-            self.answer = (self.mult_num)*(self.base_num**exp)
-            return self.answer
+        # The answer is obtained using the values obtained from the set 
+        # functions above
+        # Any Division By Zero was handled in the set functions
+        self.answer = (self.mult_num)*(self.base_num**self.exp_num)
   
     # get_super method is used to print exponents 
     # Fnction converts passed string x to superscript
