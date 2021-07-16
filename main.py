@@ -404,14 +404,32 @@ class Calculator:
         # If the user enters 6, the Exponential function is called    
         elif(int(choice) == 6):
             function = ExponentialFunction(0,0,0,0)
-            function.set_values()
-            result = function.calculate_answer()
             
-            # If result == None, then an error occured
-            if (result == None):
+            # Display format of Exponential Function
+            print('ab' + ExponentialFunction.get_super('x'))
+
+            # Ask the user to input the value for a
+            mNum = input("Enter value for a: ")
+            check = function.set_mult_num(mNum)
+
+            # Then ask the user to enter the value for b, and perform the same 
+            # checks
+            bNum = input("Enter value for b: ")
+            check = function.set_base_num(bNum)
+
+            # Ask the user to enter the value for x
+            eNum = input("Enter value for x: ")
+            check = function.set_exp_num(eNum)
+            
+            # If any of the inputs were a fraction that resulted in a
+            # ZeroDivisionError then check is equal to None and the function
+            # stops
+            if (check == None):
                 print("ERROR Division by Zero\n")
-                
+               
+            # Else, calculate the answer like normal    
             else:
+                result = function.calculate_answer()
                 # If parse == 1, then choose_function returns the value of 
                 # result
                 if(parse == 1):
@@ -427,7 +445,7 @@ class Calculator:
                 if (parse.casefold() == "Y".casefold()):
                     self.parse_function(result, str(function))
     
-                # Else, the resukt is displayed
+                # Else, the result is displayed
                 else:
                     print(function)
                     self.history.append(str(function))
