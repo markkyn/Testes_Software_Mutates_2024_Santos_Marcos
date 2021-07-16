@@ -65,9 +65,15 @@ class ExponentialFunction:
         # denomintaor and calculate answer
         if '/' in self.exp_num:
             num, den = self.exp_num.split('/')
-            exp = float(num)/float(den)
-            self.answer = (self.mult_num)*(self.base_num**exp)
-            return self.answer
+            # Division by zero is handled by trying to divide numerator and
+            # denominator and catching a ZeroDivisionError error
+            try:
+                exp = float(num)/float(den)
+                self.answer = (self.mult_num)*(self.base_num**exp)
+                return self.answer
+            # If the denominator is 0, the function returns None
+            except ZeroDivisionError:
+                return None
         # Else, the exp_num is assumed to be an integer or float and is 
         # converted
         else:
