@@ -16,6 +16,9 @@ class StandardDeviation:
     def get_psd(self):
         return self._psd
 
+    def get_ssd(self):
+        return self._ssd
+
     def add_values(self, *values):
         self._values = self._values + values
         for v in values:
