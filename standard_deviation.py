@@ -7,8 +7,8 @@ class StandardDeviation:
 
     def __compute_mean(self):
         total = 0
-        for i in self.values:
-            total += i
+        for v in self.values:
+            total += v
         
         return total/self.n_values
  
@@ -18,7 +18,17 @@ class StandardDeviation:
         for v in self.values:
             total += (v - mean) ** 2
 
-        return (total/ self.n_values) ** (0.5)
+        return (total/ self.n_values) ** 0.5
+
+    
+    def sample_standard_deviation(self):
+        total = 0
+        mean = self.__compute_mean()
+        for v in self.values:
+            total += (v - mean) ** 2
+        
+        return (total / (self.n_values - 1)) ** 0.5
+
 
 
 
