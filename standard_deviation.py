@@ -63,22 +63,3 @@ class StandardDeviation:
             total += (v - mean) ** 2
         
         return (total / (self._n_values - 1)) ** 0.5
-
-std = StandardDeviation(10, 12, 23, 23, 16, 23, 21, 16)
-print("Enter values:", std.get_values())
-print(std.get_n_values(), "values were entered.")
-print("Mean: ", std.get_mean())
-print("Population Standard Deviation: ", std.get_psd())
-print("Sample Standard Deviation: ", std.get_ssd())
-std.set_values(10, 12, 23, 23, 16, 23)
-print("Enter values:", std.get_values())
-print(std.get_n_values(), "values were entered.")
-print("Mean: ", std.get_mean())
-print("Population Standard Deviation: ", std.get_psd())
-print("Sample Standard Deviation: ", std.get_ssd())
-std.add_values(21, 16)
-print("Enter values:", std.get_values())
-print(std.get_n_values(), "values were entered.")
-print("Mean: ", std.get_mean())
-print("Population Standard Deviation: ", std.get_psd())
-print("Sample Standard Deviation: ", std.get_ssd())
