@@ -14,7 +14,7 @@ Which x can be a real or complex number.
 The instance of the class is then stored in calculator history. '''
 
 
-class HyperbolicSine:
+class hyperbolic_sine:
 
     '''HyperbolicSine has only one parameter:
 Value is the real number or complex number which we want to calculate Sinh on.
@@ -22,8 +22,8 @@ We define EulerNum and use the math library for importing
 the constant e(the Euler's number). '''
     def __init__(self, value):
         self._value = value
-        self._EulerNum = math.e
-        self._Sinh = 0
+        self._eulerNum = math.e
+        self._sinh = 0
 
     # In this function we calculate e^x and return the value
     def _calculate_exponential(self, value):
@@ -35,9 +35,9 @@ the constant e(the Euler's number). '''
                 self._calculate_exponential(-1*value))
 
     # In this function, we calculate Sinh which is (e^x - e^-x)/2
-    def calculate_Sinh(self):
-        self._Sinh = (self._calculate_numerator(self._value))/2
-        return self._Sinh
+    def calculate_sinh(self):
+        self._sinh = (self._calculate_numerator(self._value))/2
+        return self._sinh
 
     # Returns the instanced value list
     def get_value(self):
@@ -48,5 +48,5 @@ the constant e(the Euler's number). '''
         self._value = new_value
 
     # Returns the Sinh value
-    def get_Sinh(self):
-        return self._Sinh
+    def get_sinh(self):
+        return self._sinh
