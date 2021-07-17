@@ -12,6 +12,9 @@ class StandardDeviation:
 
     def get_n_values(self):
         return self._n_values
+    
+    def get_psd(self):
+        return self._psd
 
     def add_values(self, *values):
         self._values = self._values + values
