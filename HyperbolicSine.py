@@ -9,20 +9,20 @@ Original file is located at
 
 import math
 
-''' HyperbolicSine class is used to calculate Sinh(x).
+''' hyperbolic_sine class is used to calculate Sinh(x).
 Which x can be a real or complex number.
 The instance of the class is then stored in calculator history. '''
 
 
 class hyperbolic_sine:
 
-    '''HyperbolicSine has only one parameter:
+    '''hyperbolic_sine has only one parameter:
 Value is the real number or complex number which we want to calculate Sinh on.
-We define EulerNum and use the math library for importing
+We define euler_num and use the math library for importing
 the constant e(the Euler's number). '''
     def __init__(self, value):
         self._value = value
-        self._eulerNum = math.e
+        self._euler_num = math.e
         self._sinh = 0
 
     # In this function we calculate e^x and return the value
