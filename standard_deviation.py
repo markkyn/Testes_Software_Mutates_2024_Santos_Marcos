@@ -4,11 +4,16 @@ class StandardDeviation:
         self._values = values
         for v in values:
             self._n_values += 1
+        self._psd = self.population_standard_deviation()
+        self._ssd = self.sample_standard_deviation()
+
 
     def add_values(self, *values):
         self._values = self._values + values
         for v in values:
             self._n_values += 1
+        self._psd = self.population_standard_deviation()
+        self._ssd = self.sample_standard_deviation()
 
     def mean(self):
         total = 0
