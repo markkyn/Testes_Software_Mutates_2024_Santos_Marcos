@@ -5,6 +5,11 @@ class StandardDeviation:
         for v in values:
             self.n_values += 1
 
+    def add_values(self, *values):
+        self.values = self.values + values
+        for v in values:
+            self.n_values += 1
+
     def mean(self):
         total = 0
         for v in self.values:
@@ -28,3 +33,4 @@ class StandardDeviation:
             total += (v - mean) ** 2
         
         return (total / (self.n_values - 1)) ** 0.5
+        
