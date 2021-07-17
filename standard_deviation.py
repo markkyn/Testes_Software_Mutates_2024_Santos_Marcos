@@ -4,6 +4,7 @@ class StandardDeviation:
         self._values = values
         for v in values:
             self._n_values += 1
+        self._mean = self._mean()
         self._psd = self._population_standard_deviation()
         self._ssd = self._sample_standard_deviation()
 
