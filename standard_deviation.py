@@ -10,6 +10,9 @@ class StandardDeviation:
     def get_values(self):
         return self._values
 
+    def get_n_values(self):
+        return self._n_values
+
     def add_values(self, *values):
         self._values = self._values + values
         for v in values:
