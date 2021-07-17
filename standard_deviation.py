@@ -14,6 +14,9 @@ class StandardDeviation:
     def get_n_values(self):
         return self._n_values
     
+    def get_mean(self):
+        return self._mean
+    
     def get_psd(self):
         return self._psd
 
