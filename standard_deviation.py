@@ -15,7 +15,7 @@ class StandardDeviation:
         self._psd = self.population_standard_deviation()
         self._ssd = self.sample_standard_deviation()
 
-    def mean(self):
+    def _mean(self):
         total = 0
         for v in self._values:
             total += v
@@ -24,7 +24,7 @@ class StandardDeviation:
  
     def population_standard_deviation(self):
         total = 0
-        mean = self.mean()
+        mean = self._mean()
         for v in self._values:
             total += (v - mean) ** 2
 
@@ -33,7 +33,7 @@ class StandardDeviation:
     
     def sample_standard_deviation(self):
         total = 0
-        mean = self.mean()
+        mean = self._mean()
         for v in self._values:
             total += (v - mean) ** 2
         
