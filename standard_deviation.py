@@ -7,6 +7,8 @@ class StandardDeviation:
         self._psd = self._population_standard_deviation()
         self._ssd = self._sample_standard_deviation()
 
+    def get_values(self):
+        return self._values
 
     def add_values(self, *values):
         self._values = self._values + values
