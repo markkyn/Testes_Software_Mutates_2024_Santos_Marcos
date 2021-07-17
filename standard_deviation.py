@@ -11,6 +11,15 @@ class StandardDeviation:
             total += i
         
         return total/self.n_values
+ 
+    def population_standard_deviation(self):
+        total = 0
+        mean = self.__compute_mean()
+        for v in self.values:
+            total += (v - mean) ** 2
+
+        return (total/ self.n_values) ** (0.5)
+
 
 
 
