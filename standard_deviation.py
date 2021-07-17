@@ -2,10 +2,10 @@ class StandardDeviation:
     n_values = 0
     def __init__(self, *values):
         self.values = values
-        for i in values:
+        for v in values:
             self.n_values += 1
 
-    def __compute_mean(self):
+    def mean(self):
         total = 0
         for v in self.values:
             total += v
@@ -14,7 +14,7 @@ class StandardDeviation:
  
     def population_standard_deviation(self):
         total = 0
-        mean = self.__compute_mean()
+        mean = self.mean()
         for v in self.values:
             total += (v - mean) ** 2
 
@@ -23,18 +23,8 @@ class StandardDeviation:
     
     def sample_standard_deviation(self):
         total = 0
-        mean = self.__compute_mean()
+        mean = self.mean()
         for v in self.values:
             total += (v - mean) ** 2
         
         return (total / (self.n_values - 1)) ** 0.5
-
-
-
-
-
-    
-
-
-
-
