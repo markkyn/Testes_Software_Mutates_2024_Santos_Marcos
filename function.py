@@ -42,9 +42,3 @@ class PowerFunction:
     # Printing the base and exponent
     def __str__(self):
         return ("Base: " + str(self.base) + " Exponent: " + str(self.exponent))
-
-
-base = input("Enter your base: ")
-exponent = input("Enter your exponent: ")
-test = PowerFunction(base, exponent)
-print(test.exponentFunction())
