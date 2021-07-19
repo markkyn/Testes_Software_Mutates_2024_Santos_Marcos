@@ -1,3 +1,15 @@
+"""
+This module contains the code for a task for the calculator.
+The goal of this task is to demonstrate the functionality of
+the calculator, more specifically the functionality of
+standard_deviation module.
+The task involves calculating the mean, population standard
+deviation, and sample standard deviation of a set of values.
+some values of the set are removed, added back, and lastly
+the set is completely changed. The properties are calculated
+at each step for comparison and analysis.
+"""
+
 from standard_deviation import StandardDeviation
 
 
