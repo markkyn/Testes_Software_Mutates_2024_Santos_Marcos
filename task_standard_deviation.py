@@ -22,3 +22,11 @@ print("Set of values:", std.get_values())
 print("Mean: ", std.get_mean())
 print("Population Standard Deviation: ", std.get_psd())
 print("Sample Standard Deviation: ", std.get_ssd())
+
+# The set is completely changed
+std.set_values(24, 57, 41, 38, 77, 63, 13, 80)
+print("*******\nThe set is completely changed.")
+print("Set of values:", std.get_values())
+print("Mean:", std.get_mean())
+print("Population Standard Deviation: ", std.get_psd())
+print("Sample Standard Deviation: ", std.get_ssd())
