@@ -1,5 +1,0 @@
-A short paragraph describing the development process of the use case
-
-The process of developing the use case started with each member designing their own diagram based on the needs of their interviewee. 
-The initial use cases were missing some of the features of the final version as not all interviewees had the same needs.
-After discussion the use cases were combined to accommodate the majority needs of the potential users.
