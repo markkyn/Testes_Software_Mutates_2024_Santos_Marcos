@@ -17,8 +17,11 @@ class LogFunction:
     def set_base(self, base_num):
         # split and evaluate the string if input is fraction number
         if '/' in base_num:
-            num, den = base_num.split('/')
-            self.base = float(num) / float(den)
+            try:
+                num, den = base_num.split('/')
+                self.base = float(num) / float(den)
+            except ZeroDivisionError:
+                return None
 
         # set base to float of base_num if input is a number
         else:
@@ -29,8 +32,11 @@ class LogFunction:
     def set_argument(self, arg_num):
         # split and evaluate the string if input is fraction number
         if '/' in arg_num:
-            num, den = arg_num.split('/')
-            self.argument = float(num) / float(den)
+            try:
+                num, den = arg_num.split('/')
+                self.argument = float(num) / float(den)
+            except ZeroDivisionError:
+                return None
 
         # set argument to float of arg_num if input is a number
         else:
@@ -92,5 +98,7 @@ class LogFunction:
     def get_result(self):
 
         return self.result
+
+
 
 
