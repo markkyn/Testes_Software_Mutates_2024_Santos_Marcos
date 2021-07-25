@@ -12,9 +12,6 @@ from standard_deviation import StandardDeviation
 from mad import MeanAbsoluteDeviation
 from hyperbolic_sine import hyperbolic_sine
 
-
-
-# As of now, it only works with integers, float support will be added later
 # Function regex
 sine_regex = re.compile(r'(?:sin\(\-*\d*\.*\d*\))')
 hyp_sine_regex = re.compile(r'(?:sinh\(\-*\d*\.*\d*\))')
