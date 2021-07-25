@@ -27,6 +27,10 @@ class MeanAbsoluteDeviation:
     # Public method
     # Calculates (and returns) the mean absolute deviation
     def calculate_mad(self):
+        # Error handling
+        if not self._values:
+            return 0
+        
         num_of_vals = len(self._values)
 
         # Calculate the mean
