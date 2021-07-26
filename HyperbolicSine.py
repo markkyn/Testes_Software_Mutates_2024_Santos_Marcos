@@ -50,3 +50,7 @@ the constant e(the Euler's number). '''
     # Returns the Sinh value
     def get_sinh(self):
         return self._sinh
+    
+#Sample for Checking the value of Sinh(3)    
+#x = hyperbolic_sine(3)
+#print(x.calculate_sinh())    
