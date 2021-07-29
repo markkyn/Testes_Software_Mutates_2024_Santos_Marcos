@@ -7,11 +7,11 @@ class ExponentialFunction:
     # base_num = b in the function, which is the base of the function
     # exp_num = x in the function, which is the power the base is multiplied by
     # answer, which is the answer after calculating
-    def __init__(self, mult_num, base_num, exp_num, answer):
+    def __init__(self, mult_num, base_num, exp_num):
         self.mult_num = mult_num
         self.base_num = base_num
         self.exp_num = exp_num
-        self.answer = answer
+        self.answer = 0
 
     # set_Mult_Num sets the value of mult_num
     def set_mult_num(self, mNum):
