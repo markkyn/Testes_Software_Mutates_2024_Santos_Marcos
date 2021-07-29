@@ -403,7 +403,7 @@ class Calculator:
 
         # If the user enters 6, the Exponential function is called
         elif (int(choice) == 6):
-            function = ExponentialFunction(0, 0, 0, 0)
+            function = ExponentialFunction(0, 0, 0)
 
             # Display format of Exponential Function
             print('ab' + ExponentialFunction.get_super('x'))
