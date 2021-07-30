@@ -18,9 +18,13 @@ class StandardDeviation:
         increments _n_values based on the number of values, and initializes
         the rest of the attributes using their respective functions.  
         """
-        self._values = values
-        for v in values:
-            self._n_values += 1
+        if len(values) == 0:
+            self._values = None
+            self._n_values = None
+        else:
+            self._values = values
+            for v in values:
+                self._n_values += 1
         self._mean = self.__mean()
         self._psd = self._population_standard_deviation()
         self._ssd = self._sample_standard_deviation()
@@ -62,7 +66,7 @@ class StandardDeviation:
         """
         Utility function that adds values to the existing set of values
         and updates the other attributes based on the new set of values.
-        """
+        """ 
         self._values = self._values + values
         for v in values:
             self._n_values += 1
@@ -95,7 +99,7 @@ class StandardDeviation:
     def _sample_standard_deviation(self):
         """
         Private function that calculates the sample standard deviation.
-        """
+        """       
         total = 0
         mean = self.__mean()
         for v in self._values:
