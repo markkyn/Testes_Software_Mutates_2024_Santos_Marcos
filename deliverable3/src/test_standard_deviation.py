@@ -10,14 +10,14 @@ and _sample_standard_deviation functions.
 import sys
 from standard_deviation import StandardDeviation
 
-std = StandardDeviation(75, 89, 94, 13, 42, 77, 40)
+std = StandardDeviation(75/7, 89/3, 94/5, 13/4, 42/5, 77/3, 40/6)
 
-# Precision of 0.0000000001
+# Unit tests
 def test_mean():
-    assert(abs(std.get_mean() - 61.42857142857) < 0.0000000001)
+    assert(abs(std.get_mean() - 14.737755102053) < 0.0000000001)
 
 def test_population_standard_deviation():
-    assert(abs(std.get_psd() - 27.85091505476) < 0.0000000001)
+    assert(abs(std.get_psd() - 9.352476933703) < 0.0000000001)
 
 def test_sample_standard_deviation():
-    assert((std.get_ssd() - 30.08242644722) < 0.0000000001)
+    assert((std.get_ssd() - 10.101829649195) < 0.0000000001)
