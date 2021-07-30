@@ -15,7 +15,7 @@ class ExponentialFunction:
 
     # set_mult_num sets the value of mult_num
     def set_mult_num(self, m_num):
-        # If the mNum is a fraction, then split into numerator and denominator
+        # If m_num is a fraction, then split into numerator and denominator
         # Then set mult_num to numerator/denominator
         # If there is a division by zero, the exception is caught and the
         # function returns None
@@ -26,14 +26,14 @@ class ExponentialFunction:
                 return self.mult_num
             except ZeroDivisionError:
                 return None
-        # Else, set mult_num to float of mNum
+        # Else, set mult_num to float of m_num
         else:
             self.mult_num = float(m_num)
             return self.mult_num
   
     #set_base_num sets the value of base_num
     def set_base_num(self, b_num):
-        # If bNum is a fraction, then split into numerator and denominator
+        # If b_num is a fraction, then split into numerator and denominator
         # If there is a division by zero, the exception is caught and
         # The function returns None
         if '/' in b_num:
