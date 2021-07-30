@@ -92,6 +92,8 @@ class StandardDeviation:
         """
         Private function that calculates the mean of the set.
         """
+        if self._values is None or self._n_values is None:
+            return None
         total = 0
         for v in self._values:
             total += v
