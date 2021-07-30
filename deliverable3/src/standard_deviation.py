@@ -104,6 +104,7 @@ class StandardDeviation:
     def _population_standard_deviation(self):
         """
         Private function that calculates the population standard deviation.
+        In case the set of values is empty return None.
         """
         if self._values is None or self._n_values is None:
             return None
