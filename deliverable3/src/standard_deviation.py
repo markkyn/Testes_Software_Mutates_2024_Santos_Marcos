@@ -17,7 +17,7 @@ class StandardDeviation:
         Class constructor initializes _values with the given values,
         increments _n_values based on the number of values, and initializes
         the rest of the attributes using their respective functions.
-        In case no values have been entered _values and _n_values are
+        In case no values are passed _values and _n_values are
         both set to None. 
         """
         if len(values) == 0:
