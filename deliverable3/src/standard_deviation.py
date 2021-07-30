@@ -40,10 +40,14 @@ class StandardDeviation:
         Mutator for _values that updates other
         attributes based on the new set values.
         """
-        self._values = values
-        self._n_values = 0
-        for v in values:
-            self._n_values += 1
+        if len(values) == 0:
+            self._values = None
+            self._n_values = None
+        else:
+            self._values = values
+            self._n_values = 0
+            for v in values:
+                self._n_values += 1
         self._mean = self.__mean()
         self._psd = self._population_standard_deviation()
         self._ssd = self._sample_standard_deviation()
