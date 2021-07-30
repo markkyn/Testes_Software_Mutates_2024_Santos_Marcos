@@ -39,6 +39,8 @@ class StandardDeviation:
         """
         Mutator for _values that updates other
         attributes based on the new set values.
+        In case no values are passed _values 
+        and _n_values are both set to None.
         """
         if len(values) == 0:
             self._values = None
