@@ -74,6 +74,8 @@ class StandardDeviation:
         """
         Utility function that adds values to the existing set of values
         and updates the other attributes based on the new set of values.
+        In case the set of values is empty _values and _n_values are
+        assigned to the passed values and length of values respectively.
         """ 
         if self._values == None or self._n_values == None:
             self._values = values
