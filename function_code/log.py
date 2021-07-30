@@ -52,11 +52,15 @@ class LogFunction:
                 b_num = input("Please enter the value for b: ")
                 if self.set_base(b_num) == 1:
                     raise exceptions.BaseNumError1
+                elif self.set_base(b_num) is None:
+                    raise exceptions.ZeroError
                 elif self.base <= 0:
                     raise exceptions.BaseNumError2
                 break
             except exceptions.BaseNumError1:
                 print("Logarithm with base of 1 is undefined. Please enter a valid number")
+            except exceptions.ZeroError:
+                print("Can't divided by zero, please enter a valid denominator")
             except exceptions.BaseNumError2:
                 print("Logarithm with non-positive base is undefined. Please enter a valid number")
         self.set_base(b_num)
@@ -64,9 +68,13 @@ class LogFunction:
         while True:
             try:
                 arg_num = input("Please enter the value for x: ")
-                if self.set_argument(arg_num) <= 0:
+                if self.set_argument(arg_num) is None:
+                    raise exceptions.ZeroError
+                elif self.set_argument(arg_num) <= 0:
                     raise exceptions.ArgumentError
                 break
+            except exceptions.ZeroError:
+                print("Can't divided by zero, please enter a valid denominator")
             except exceptions.ArgumentError:
                 print("Error: Illegal argument. Value not in domain. Please enter a valid number")
         self.set_argument(arg_num)
