@@ -9,18 +9,19 @@ and _sample_standard_deviation functions.
 
 import sys
 from standard_deviation import StandardDeviation
+import math
 
-std = StandardDeviation(75/7, 89/3, 94/5, 13/4, 42/5, 77/3, 40/6)
+std = StandardDeviation(2**(1./2), (3**(1./3))/2, 4**7, 13/4, math.sin(333), math.cos(963),17)
 
 # Unit tests
 def test_mean():
-    assert(abs(std.get_mean() - 14.737755102053) < 0.0000000001)
+    assert(abs(std.get_mean() - 2343.7535487876) < 0.0000000001)
 
 def test_population_standard_deviation():
-    assert(abs(std.get_psd() - 9.352476933703) < 0.0000000001)
+    assert(abs(std.get_psd() - 5731.9093454445) < 0.0000000001)
 
 def test_sample_standard_deviation():
-    assert((std.get_ssd() - 10.101829649195) < 0.0000000001)
+    assert((std.get_ssd() - 6191.1696957677) < 0.0000000001)
 
 # Input test case
 numbers = input('Please provide numbers separated by comma to calculate the standard deviation \nExample: 7,9,20,20,13,20,18,13')
