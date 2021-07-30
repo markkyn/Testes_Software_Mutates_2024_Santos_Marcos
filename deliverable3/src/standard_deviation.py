@@ -119,7 +119,9 @@ class StandardDeviation:
     def _sample_standard_deviation(self):
         """
         Private function that calculates the sample standard deviation.
-        """       
+        """
+        if self._values is None or self._n_values is None or self._n_values == 1:
+            return None
         total = 0
         mean = self.__mean()
         for v in self._values:
