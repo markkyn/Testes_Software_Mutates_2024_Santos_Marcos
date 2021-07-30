@@ -1,6 +1,7 @@
 """
-This module is a unit test for standard_deviation
-module and its functions.
+This module contains tests for standard_deviation
+module and its functions. It includes a set of
+unit tests and an input test.
 A StandardDeviation object is created using
 random numbers and used to check the precision
 of the __mean, _population_standard_deviation, 
@@ -11,6 +12,8 @@ import sys
 from standard_deviation import StandardDeviation
 import math
 
+# Prior to running unit tests using pytest
+# the input test must be commented out
 print('Set of values: 2**(1/2), ((3**(1/3))/2, 4**7, 13/4, sin(333), cos(963), 17')
 std = StandardDeviation(2**(1./2), (3**(1./3))/2, 4**7, 13/4, math.sin(333), math.cos(963), 17)
 
