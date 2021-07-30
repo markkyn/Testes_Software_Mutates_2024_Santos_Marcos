@@ -29,13 +29,14 @@ print(std.get_psd())
 print(std.get_ssd())
 
 # Input test case
-numbers = input('Please provide numbers separated by comma to calculate the standard deviation \nExample: 7,9,20,20,13,20,18,13')
-numbers = numbers.split(',')
+if input('Would you like to test the module with your own input?(y/n)') == 'y':
+    numbers = input('Please provide numbers separated by comma to calculate the standard deviation \nExample: 7,9,20,20,13,20,18,13')
+    numbers = numbers.split(',')
 
-std = StandardDeviation()
-for i in numbers:
-    std.add_values(int(i))
+    std = StandardDeviation()
+    for i in numbers:
+        std.add_values(int(i))
 
-print(std.get_mean())
-print(std.get_psd())
-print(std.get_ssd())
+    print(std.get_mean())
+    print(std.get_psd())
+    print(std.get_ssd())
