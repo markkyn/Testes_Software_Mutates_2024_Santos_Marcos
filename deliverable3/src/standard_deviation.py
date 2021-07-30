@@ -1,6 +1,8 @@
 """
 This module implements the standard deviation function for the calculator.
 """
+
+
 class StandardDeviation:
     """
     This class encapsulates functionality for the standard deviation function as an object.
@@ -12,6 +14,7 @@ class StandardDeviation:
     """
 
     _n_values = 0
+
     def __init__(self, *values):
         """
         Class constructor initializes _values with the given values,
@@ -115,7 +118,6 @@ class StandardDeviation:
 
         return (total/ self._n_values) ** 0.5
 
-    
     def _sample_standard_deviation(self):
         """
         Private function that calculates the sample standard deviation.
