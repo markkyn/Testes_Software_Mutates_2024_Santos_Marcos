@@ -11,7 +11,8 @@ import sys
 from standard_deviation import StandardDeviation
 import math
 
-std = StandardDeviation(2**(1./2), (3**(1./3))/2, 4**7, 13/4, math.sin(333), math.cos(963),17)
+print('Set of values: 2**(1/2), ((3**(1/3))/2, 4**7, 13/4, sin(333), cos(963), 17')
+std = StandardDeviation(2**(1./2), (3**(1./3))/2, 4**7, 13/4, math.sin(333), math.cos(963), 17)
 
 # Unit tests
 def test_mean():
@@ -22,6 +23,10 @@ def test_population_standard_deviation():
 
 def test_sample_standard_deviation():
     assert((std.get_ssd() - 6191.1696957677) < 0.0000000001)
+
+print(std.get_mean())
+print(std.get_psd())
+print(std.get_ssd())
 
 # Input test case
 numbers = input('Please provide numbers separated by comma to calculate the standard deviation \nExample: 7,9,20,20,13,20,18,13')
