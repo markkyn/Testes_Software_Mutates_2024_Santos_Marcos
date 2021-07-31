@@ -8,8 +8,12 @@ class MeanAbsoluteDeviation:
     # values = the list of values to perform the MAD function on
     def __init__(self, values):
         self._values = values
-        self._mean = 0
-        self._mad = 0
+        if not values:
+            self._mean = 0
+            self._mad = 0
+        else:
+            self._mean = self.__calculate_mean(self._values)
+            self._mad = self.calculate_mad()
 
 
     # Private method
