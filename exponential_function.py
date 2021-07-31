@@ -84,6 +84,7 @@ class ExponentialFunction:
         # functions above
         # Any Division By Zero was handled in the set functions
         self.answer = (self.mult_num) * (self.base_num ** self.exp_num)
+        return self.answer
   
     # get_super method is used to print exponents 
     # Fnction converts passed string x to superscript
