@@ -1,4 +1,5 @@
-import pytest
+import sys
+sys.path.insert(0, './deliverable3/src')
 from exponential_function import ExponentialFunction
 import math
 
