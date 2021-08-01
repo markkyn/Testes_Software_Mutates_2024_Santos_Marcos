@@ -8,4 +8,4 @@ print(test.exponentFunction())
 def test_exponential_function():
     assert(abs(test - 100) < 0.0000000001)
 
-test_exponential_function()
+print(test_exponential_function)
