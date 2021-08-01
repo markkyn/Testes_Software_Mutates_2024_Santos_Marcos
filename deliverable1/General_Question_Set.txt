@@ -1,0 +1,139 @@
+**General Question Set**
+
+1. What is your current program of study/profession?
+A1: Pure and Applied Math
+
+2. How much experience do you have in this field of study/work?
+A2: 1 and half years in current program. 3 years in Pure and Applied Science at Marianopolis. 
+
+3. Do you enjoy your studies/work? If yes, which part interests you the most? If no, what do you not like about it?
+A3: Yes
+Enjoys problem solving, given a problem and have all the necessary solutions to solve the problem.
+Doing calculations, calculator work, Algebra is most preferred subject.
+Having tools necessary for computations, steps to get to final answer
+Dislikes, proofs and analysis, does not enjoy creativity, prefer more step wise procedures and approach. 
+
+4. What tasks or jobs would you say you mostly do in your field of study/work?
+A4: Taking notes for class
+A lot of proofs, here is statement and proof using rules provided
+Some classes are theoretical with proofs, others include calculations with proofs and matrices
+Computation and proofs combined.
+Solving problems and taking notes in general
+
+5. Can you tell me some of your likes and dislikes and what you enjoy doing?
+A5: Enjoys drawing and baking, music (J-pop or pop)
+Don’t enjoy news, dealing with economy money, or politics
+Reading (Informational and Learning new fields like Psychology/Math/Physics)
+Watching tv shows and movies (Anime and documentary/informational)
+Spending time with family
+
+6. What are your values when it comes to your field of study?
+A6: Honesty, Hard-Working, Self-Work, Self-Understanding, Integrity, Thorough, Not Assuming, Neatness
+
+7. What occupation are you aiming towards, if you are not already employed? 
+A7: Short Term, TA for a Math class
+Future, Professor or Researcher in the Math
+Unsure of specific field, desires more experience and understand more
+
+8. What skills have you been developing which you feel will be the most important for this future career?
+A8: Organization, being organized in studies
+Interpersonal skills and working with others, trying to improve
+Timeliness and reliability, making sure tasks are done on time and being reliable
+
+9. What are your current goals for yourself? If you have none, do you think you will have some in the future?
+A9: Learn more about programming, LaTeX, Python
+Trying to develop more relations with professors to gain a TA position
+
+10. Do you prefer to use to use the hand-held calculator or computer calculator?
+A10: Prefers handheld over computer. Used to it more and is more portable for class. Rather not have another window open on computer while doing work.
+
+11. Do you have experience using the command line of your computer? And using a calculator on your computer?
+A11: Experience using handheld calculator over computer
+Has used command line to remedy problems with computer
+Not much experience with programs use with command line
+
+12. Are you comfortable enough to use a calculator without a Graphical Interface and just with the command line?
+A12: Would prefer user interface, with buttons over typing on command line. 
+
+13. Currently, my team and I are designing a scientific calculator and we are hoping to get your input to improve our design. How much experience do you have with a Scientific Calculator, and how often do you use one?
+A13: Quite a bit of experience, used all through college and university, not much as of late
+Current learning field is dealing with proofs and not much with procedures and input
+Uses it a few times a week within class, less often then in college
+Row reducing matrix is example of not available
+
+14. Are there any functions you feel should be included in a Scientific Calculator but aren’t?
+A14: Doing operation to get answer, no way to return to original function to check if unput was correct.
+No way to return to previous function and input values
+Better way to deal with a lot of brackets, losing track of open and closing brackets in expression
+More functions to input a matrix, perform row reduction or allow for matric multiplication or addition
+
+15. Does your operating system provide any calculator? if yes, Do you think its functions are enough for you?
+A15: Yes it does offer one, but there are not all the scientific functions needed. 
+Missing some trignometric like sinh. Also doesn't have for other roots besides sqaure
+
+16. What function/ functions do you usually need from a Scientific Calculator most?
+A16: Mostly used for values cannot calculate alone. 
+Trignometric, log and roots of values. Also for factorial.
+
+17. Do you think you will use a scientific calculator in your field of study and in your future career. If yes, what will some of your uses for it, if no, do you think you would use for personal use?
+A17: In future career, will most likely use it in the future and will need it
+Currently uses it for derivative and integrals, using log, e and trigonometric functions
+Taking roots of numbers
+Mainly dealing with trigonometric and exact values, convert fractional to decimal, complicated algebra to reduce down to single number
+
+18. Do you use Scientific Calculator during your work or your exams or your course projects or anything else?
+A18: Yes, less than in previous years currently. mostly in class and for exams. 
+Not many projects, used for assignments and algebra exams
+
+19. Our calculator will include the functions for exponential functions, arccos, log, Gamma, Mean Absolute Deviation, Standard Deviation, sinh and a special exponential function which allows variables and expressions for the base instead of natural numbers. Can you tell us which function you would find most usable for yourself? Why?
+A19: Gamma function and standard deviation will most likely be used, from statistics
+Standard deviation to input the data and get answer
+Gamma in probability
+Trigonometric function
+TO plug in input and get final answer
+
+20. If no, is it because you don’t see yourself using any of the functions mentioned, or some other reason?
+A20: Other functions don’t really see specific use for others
+Others mentioned will be more certain in the future
+Not clear of a context for the other functions
+
+21. How familiar are you with these functions and how they work?
+A21: Very familiar, have used them all before. Less familiar with MAD and x^y, haven't used in a while
+Most familiar with log, Gamma, Standard deviation since used in classes now
+
+22. Do you think it is necessary that a Scientific Calculator should take a function as input?
+A22: Yes, would prefer if calculator could help simplify long expressions
+Easier to input functions to help get exact values as well
+
+23. Are there any features you would like to see included in this calculator that you think would make the design better?
+A23: Being able to put in a long expression and simplify it, instead of just decimal
+After plugging in big trigonometric function, can use trig identities to simplify
+
+24. What should the precision for a Scientific Calculator be?
+A24: Don’t need more or less decimal places, but would prefer feature that gives exact values when wanted (trigonometric or sin function)
+Instead of decimal rounding, prefer exact values in identity or fraction, simplify and shorter answer
+
+25. When using a calculator do you prefer to receive a step by step solution or simply a final answer?
+A25: Prefers using online calculator that shows expressions in proper formatting. See the expression on how you would see on paper (not 2^5). Help see if inputting is done properly
+Easier to see if mistakes were made, would help with answering questions later on
+
+26. Do you think a history is essential for a calculator? If yes, how big should the history be?
+A26: Yes, being able to have a window to see everything being written down, being able to see previous inputs, have a history of values, helpful to check your work
+History should last until calculator is cleared or new function is started
+
+27. Do you have any positive experiences with a Scientific Calculator, if yes please elaborate?
+A27: Enjoyed the use of factorial function and the choose function.
+Being able to use trig functions regularly, much simpler 
+Regular operations, simple arithmetic and trig were simple to use and easy to understand right away
+
+28. Do you have any negative experiences with a Scientific Calculator, if yes please elaborate?
+A28: Annoying that for a lot of functions have to click the shift function to access
+The input is not very intuitive for some functions, for e function, need to place brackets around exponent
+Doesn’t show the input as exponent, looks more like multiplication (format not as nice)
+After writing long chain of operations, difficult to go back and look through your large input and expression
+Taking cube root or fourth root, have to enter the number of root first before value, choose you want to do a root and then specify the root number and the input value
+Screen is too small, would like to see more of input, instead of having to go back
+
+29. In your opinion, what would improve your experience when using a Scientific Calculator on a computer? What features would improve its usage for you?
+A29: Having a dedicated button for all the functions to use, instead of using shift or second function to access all the same
+Nice formatted input so it looks more like on paper then, see everything nicely and clear
