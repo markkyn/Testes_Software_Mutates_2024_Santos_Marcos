@@ -18,15 +18,15 @@ class ExponentialFunction:
         # If the mNum is a fraction, then split into numerator and denominator
         # Then set mult_num to numerator/denominator
         # If there is a division by zero, the exception is caught and the
-        # function returns None
+        # ZeroDivisionError is raised
         if '/' in m_num:
             try:
                 num, den = m_num.split('/')
+                if float(den) == 0:
+                    raise ZeroDivisionError
                 self.mult_num = float(num) / float(den)
                 return self.mult_num
             except ZeroDivisionError:
-                # Raise ZeroDivisionError
-                raise ZeroDivisionError
                 return None
         # Else, set mult_num to float of mNum
         else:
@@ -41,6 +41,8 @@ class ExponentialFunction:
         if '/' in b_num:
             try:
                 num, den = b_num.split('/')
+                if float(den) == 0:
+                    raise ZeroDivisionError
                 self.base_num = float(num) / float(den)
                 return self.base_num
             except ZeroDivisionError:
@@ -60,6 +62,8 @@ class ExponentialFunction:
         if '/' in e_num:
             try:
                 num, den = e_num.split('/')
+                if float(den) == 0:
+                    raise ZeroDivisionError
                 self.exp_num = float(num) / float(den)
                 return self.exp_num
             except ZeroDivisionError:
@@ -80,6 +84,7 @@ class ExponentialFunction:
         return self.base_num
         
     # get_exp_num returns the value of exp_num
+    def get_exp_num(self):
         return self.exp_num
 
     # calculate_answer is used to calculate the final answer from the input 
@@ -91,7 +96,7 @@ class ExponentialFunction:
         # Any Division By Zero was handled in the set functions
         self.answer = (self.mult_num) * (self.base_num ** self.exp_num)
         return self.answer
-  
+        
     # get_super method is used to print exponents 
     # Fnction converts passed string x to superscript
     # GeeksforGeeks (2021) get_super source code (Version 1.0) [Source code].
