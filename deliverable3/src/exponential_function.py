@@ -25,6 +25,8 @@ class ExponentialFunction:
                 self.mult_num = float(num) / float(den)
                 return self.mult_num
             except ZeroDivisionError:
+                # Raise ZeroDivisionError
+                raise ZeroDivisionError
                 return None
         # Else, set mult_num to float of mNum
         else:
@@ -42,6 +44,8 @@ class ExponentialFunction:
                 self.base_num = float(num) / float(den)
                 return self.base_num
             except ZeroDivisionError:
+                # Raise ZeroDivisionError
+                raise ZeroDivisionError
                 return None
         # Else, set base_num to float of b_num
         else:
@@ -59,6 +63,8 @@ class ExponentialFunction:
                 self.exp_num = float(num) / float(den)
                 return self.exp_num
             except ZeroDivisionError:
+                # Raise ZeroDivisionError
+                raise ZeroDivisionError
                 return None
         # Else, set exp_num to float of bNum
         else:
@@ -84,6 +90,7 @@ class ExponentialFunction:
         # functions above
         # Any Division By Zero was handled in the set functions
         self.answer = (self.mult_num) * (self.base_num ** self.exp_num)
+        return self.answer
   
     # get_super method is used to print exponents 
     # Fnction converts passed string x to superscript
