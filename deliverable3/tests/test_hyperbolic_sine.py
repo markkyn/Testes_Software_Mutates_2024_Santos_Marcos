@@ -11,3 +11,6 @@ def test_answer():
 
 print(test_answer())
 # The accuracy was exactly what we wanted.
+
+print("The value is: ", Sinh.get_value())
+print("The answer is: ", Sinh.calculate_sinh())
