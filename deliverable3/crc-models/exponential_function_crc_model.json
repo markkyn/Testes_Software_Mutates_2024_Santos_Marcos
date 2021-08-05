@@ -1,0 +1,25 @@
+[
+  {
+    "name": "ExponentialFunction",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Multiplier Number",
+      "Base Number",
+      "Exponent",
+      "Answer",
+      "Set Multiplier Number",
+      "Set Base Number",
+      "Set Exponent",
+      "Get Multiplier Number",
+      "Get Base Number",
+      "Get Exponent",
+      "Calculate Answer",
+      "Get Superscript"
+    ],
+    "collaborators": [
+      "Calculator"
+    ]
+  }
+]
