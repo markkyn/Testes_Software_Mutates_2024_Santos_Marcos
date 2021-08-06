@@ -1,5 +1,9 @@
+import sys
+sys.path.insert(0, './deliverable3/src')
 from hyperbolic_sine import HyperbolicSine
 import math
+
+
 
 # Using python's calculator to test if our calculator has enough accuracy or not.
 Sinh = HyperbolicSine(3)
