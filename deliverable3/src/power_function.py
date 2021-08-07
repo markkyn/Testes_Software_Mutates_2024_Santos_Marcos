@@ -4,7 +4,7 @@ class PowerFunction:
     def set_base(self, base): 
         # Check if the base is a real number
         # If yes, separate both nums/denum of the fraction and return value
-        if("/" in base):
+        if("/" in str(base)):
             try:
                 numerator = base[0:base.index('/')]
                 denumerator = base[base.index('/') + 1:]
@@ -19,7 +19,7 @@ class PowerFunction:
     def set_exponent(self, exponent):
         # Check if the exponent is a real number
         # If yes, separate both nums/denum of the fraction and return value
-        if("/" in exponent):
+        if("/" in str(exponent)):
             try:
                 numerator = exponent[0:exponent.index('/')]
                 denumerator = exponent[exponent.index('/') + 1:]
