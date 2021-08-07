@@ -1,0 +1,21 @@
+[
+    {
+        "name": "LogFunction",
+        "superclasses": "",
+        "subclasses": "",
+        "type": 1,
+        "responsibilities": [
+            "Base Number",
+            "Argument",
+            "Result",
+            "Set Base Number",
+            "Set Argument Number",
+            "Set Values",
+            "Calculate Algorithm",
+            "Get Result"
+        ],
+        "collaborators": [
+            ""
+        ]
+    }
+]

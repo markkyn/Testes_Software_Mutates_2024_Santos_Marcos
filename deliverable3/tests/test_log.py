@@ -11,12 +11,12 @@ unit tests to approve the reasonable accuracy
 of the answer for algebraic number
 """
 
-function1 = log.LogFunction(0, 0)
+function1 = LogFunction(0, 0)
 function1.set_base("1/2")
 function1.set_argument("100")
 answer1 = function1.cal_log()
 
-function2 = log.LogFunction(0, 0)
+function2 = LogFunction(0, 0)
 function2.set_base("1/3")
 function2.set_argument("1/2")
 answer2 = function2.cal_log()

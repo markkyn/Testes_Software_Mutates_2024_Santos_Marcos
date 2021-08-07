@@ -1,19 +1,19 @@
 [
-  {
-    "name": "hyperbolic_sine",
-    "superclasses": "",
-    "subclasses": "",
-    "type": 1,
-    "responsibilities": [
-      "Calculate the exponential (e^x)",
-      "Calculate numerator (e^x - e^-x)",
-      "Answer",
-      "Get the exponent",
-      "Set the exponent (x)",
-      "Get answer"
-    ],
-    "collaborators": [
-      "Calculator"
-    ]
-  }
+    {
+        "name": "HyperbolicSine",
+        "superclasses": "",
+        "subclasses": "",
+        "type": 1,
+        "responsibilities": [
+            "Calculate the exponential (e^x)",
+            "Calculate numerator (e^x - e^-x)",
+            "Answer",
+            "Get the exponent",
+            "Set the exponent (x)",
+            "Get answer"
+        ],
+        "collaborators": [
+            ""
+        ]
+    }
 ]

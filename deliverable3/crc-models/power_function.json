@@ -1,0 +1,19 @@
+[
+    {
+        "name": "PowerFunction",
+        "superclasses": "",
+        "subclasses": "",
+        "type": 1,
+        "responsibilities": [
+            "Base",
+            "Exponent",
+            "Exponent Function",
+            "ToString Function",
+            "Set Base",
+            "Set Exponent"
+        ],
+        "collaborators": [
+            ""
+        ]
+    }
+]
