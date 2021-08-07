@@ -10,9 +10,9 @@ value to ensure the margin of error remains within
 """
 
 import sys
-from mad import MeanAbsoluteDeviation
+sys.path.insert(0, './deliverable3/src')
+from mean_absolute_deviation import MeanAbsoluteDeviation
 import math
-import pytest
 
 # Prior to running unit tests using pytest
 # the input test must be commented out
