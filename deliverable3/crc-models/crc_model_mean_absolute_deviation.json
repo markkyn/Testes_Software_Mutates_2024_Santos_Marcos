@@ -1,0 +1,19 @@
+[
+    {
+      "name": "MeanAbsoluteDeviation",
+      "superclasses": "",
+      "subclasses": "",
+      "type": 1,
+      "responsibilities": [
+        "Calculate mean",
+        "Calculate mean absolute deviation",
+        "Get mean absolute deviation",
+        "Get mean",
+        "Set values (list)",
+        "Get values (list)"
+      ],
+      "collaborators": [
+        "Calculator"
+      ]
+    }
+  ]
