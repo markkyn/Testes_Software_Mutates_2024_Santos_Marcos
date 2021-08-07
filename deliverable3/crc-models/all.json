@@ -1,0 +1,134 @@
+[
+    {
+        "name": "LogFunction",
+        "superclasses": "",
+        "subclasses": "",
+        "type": 1,
+        "responsibilities": [
+            "Base Number",
+            "Argument",
+            "Result",
+            "Set Base Number",
+            "Set Argument Number",
+            "Set Values",
+            "Calculate Algorithm",
+            "Get Result"
+        ],
+        "collaborators": [
+            ""
+        ]
+    },
+    {
+        "name": "MeanAbsoluteDeviation",
+        "superclasses": "",
+        "subclasses": "",
+        "type": 1,
+        "responsibilities": [
+            "Calculate mean",
+            "Calculate mean absolute deviation",
+            "Get mean absolute deviation",
+            "Get mean",
+            "Set Values (list)",
+            "Get Values (list)"
+        ],
+        "collaborators": [
+            ""
+        ]
+    },
+    {
+        "name": "ExponentialFunction",
+        "superclasses": "",
+        "subclasses": "",
+        "type": 1,
+        "responsibilities": [
+            "Multiplier Number",
+            "Base Number",
+            "Exponent",
+            "Answer",
+            "Set Multiplier Number",
+            "Set Base Number",
+            "Set Exponent",
+            "Get Multiplier Number",
+            "Get Base Number",
+            "Get Exponent",
+            "Calculate Answer",
+            "Get Superscript"
+        ],
+        "collaborators": [
+            ""
+        ]
+    },
+    {
+        "name": "HyperbolicSine",
+        "superclasses": "",
+        "subclasses": "",
+        "type": 1,
+        "responsibilities": [
+            "Calculate the exponential (e^x)",
+            "Calculate numerator (e^x - e^-x)",
+            "Answer",
+            "Get the exponent",
+            "Set the exponent (x)",
+            "Get answer"
+        ],
+        "collaborators": [
+            ""
+        ]
+    },
+    {
+        "name": "StandardDeviation",
+        "superclasses": "",
+        "subclasses": "",
+        "type": 1,
+        "responsibilities": [
+            "Values",
+            "Number of Values",
+            "Mean",
+            "Population Standard Deviation",
+            "Sample Standard Deviation",
+            "Get Values",
+            "Set Values",
+            "Get Number of Values",
+            "Get Mean",
+            "Get Population Standard Deviation",
+            "Get Sample Standard Deviation"
+        ],
+        "collaborators": [
+            ""
+        ]
+    },
+    {
+        "name": "InverseCosine",
+        "superclasses": "",
+        "subclasses": "",
+        "type": 1,
+        "responsibilities": [
+            "Set Values",
+            "Get Values",
+            "Sqrt",
+            "Arcsin taylor sum",
+            "Arcsin interval",
+            "Arccos"
+        ],
+        "collaborators": [
+            ""
+        ]
+    },
+    {
+        "name": "PowerFunction",
+        "superclasses": "",
+        "subclasses": "",
+        "type": 1,
+        "responsibilities": [
+            "Base",
+            "Exponent",
+            "Exponent Function",
+            "ToString Function",
+            "Set Base",
+            "Set Exponent"
+        ],
+        "collaborators": [
+            ""
+        ]
+    }
+]
