@@ -1,0 +1,19 @@
+[
+    {
+        "name": "InverseCosine",
+        "superclasses": "",
+        "subclasses": "",
+        "type": 1,
+        "responsibilities": [
+            "Set Values",
+            "Get Values",
+            "Sqrt",
+            "Arcsin taylor sum",
+            "Arcsin interval",
+            "Arccos"
+        ],
+        "collaborators": [
+            ""
+        ]
+    }
+]
