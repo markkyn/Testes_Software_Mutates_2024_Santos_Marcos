@@ -9,7 +9,7 @@ class BaseNumError1(Error):
 
 
 class BaseNumError2(Error):
-    """Exception raised for errors in the base number input less than or equals to zero."""
+    """Exception raised for errors in the base number input less than or equals to 0."""
     pass
 
 
