@@ -1,14 +1,36 @@
-# This module contains the test for log function, user can input the base number and argument number.
-# The first answer is from the log function class and the second one is from built-in math library
-# in python. From the comparation of two result, we can see the accuracy is 100%.
+
 import sys
 sys.path.insert(0, './deliverable3/src')
 from log import LogFunction
 import math
 
-function = log.LogFunction(0, 0)
-function.set_values()
-answer = function.cal_log()
-print("For reasonable accuracy, we keep 10 decimals after the point.")
-print("The answer is %.10f" % answer)
-print("The built-in python log answer is %.10f" % math.log(function.argument, function.base))
+"""
+This module contains tests for log
+module. It includes two set of
+unit tests to approve the reasonable accuracy
+of the answer for algebraic number
+"""
+
+function1 = log.LogFunction(0, 0)
+function1.set_base("1/2")
+function1.set_argument("100")
+answer1 = function1.cal_log()
+
+function2 = log.LogFunction(0, 0)
+function2.set_base("1/3")
+function2.set_argument("1/2")
+answer2 = function2.cal_log()
+
+
+# Unit test
+def test_log_answer1():
+    assert(answer1 - math.log(function1.argument, function1.base) < 0.0000000001)
+
+
+def test_log_answer2():
+    assert(answer1 - math.log(function2.argument, function2.base) < 0.0000000001)
+
+
+print("The answer for log(1/2)(100) is %.10f" % answer1)
+print("The answer for log(1/3)(1/2) is %.10f" % answer2)
+
