@@ -38,7 +38,7 @@ class InverseCosine:
 
     # Accessor for values.
     def get_values(self):
-        return self.values
+        return self.value
 
     # Helper function that calculates the square root.
     def __sqrt(n):
