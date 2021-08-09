@@ -1,8 +1,8 @@
 import sys
+sys.path.insert(0, './deliverable3/src')
+from power_function import PowerFunction
 
-from deliverable3.src.power_function import PowerFunction
 
-sys.path.insert(0, '../deliverable3/src')
 
 ##For base: enter 10
 # base = input("Enter your base: ")
