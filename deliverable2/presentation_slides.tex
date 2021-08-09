@@ -1,0 +1,207 @@
+\documentclass{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\setbeamertemplate{page number in head/foot}{}
+\useoutertheme{metropolis}
+\useinnertheme{metropolis}
+\usefonttheme{metropolis}
+\usepackage{graphicx,wrapfig,lipsum}
+\usepackage{multicol}
+\usepackage{caption}
+
+\definecolor{MyBackground}\definecolor{anti-flashwhite}
+
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+
+
+\title{ETERNITY - Scientific Calculator}
+\subtitle{Team F}
+\date{11^{th}  June, 2021}
+\author{Matteo Iaconetti, Jainil Jaha, Arman Jahanpour, Kevin Jiang, Yaqi Kang, Michael Kerr, Pooya Khoshabi}
+\institute{\textbf{Concordia University} - Comp 354}
+
+
+
+\begin{document}
+
+{
+\setbeamertemplate{footline}{} 
+\begin{frame}
+  \maketitle
+  \thispagestyle{empty}
+\end{frame}
+}
+\addtocounter{framenumber}{-1}
+
+
+\begin{frame}{Our Approach so far}
+\begin{columns}
+    \begin{column}{0.3\textwidth}
+        \begin{itemize}
+            \item Bi-Weekly Meetings
+            \item Requirement Gathering
+            \item Research and Planning
+            \item Version control Via GitHub
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.7\textwidth}
+        \includegraphics[width=1.2\textwidth]{kanbanboard.png}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\section{Team Organization}
+
+\begin{frame}[fragile]{Team Organization}
+      \begin{itemize}
+          \item Bi-weekly meetings every Friday and Sunday
+          \item Documenting meeting minutes and agenda through shared google doc
+          \item Mutual support and positive re-enforcement
+          \item Frequent feedback and communication over chat on Discord
+          \item Collaborative and Inclusive Decision-making
+      \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Task allocation}
+
+    \vspace*{-6.5mm}    
+    \hspace*{-11mm}
+    \includegraphics[width=\paperwidth]{taskallocation.png}
+    
+\end{frame}
+
+
+\section[Research and Planning]{Introduction}
+
+\begin{frame}[fragile]{Agile Project Management}
+
+  Our approach was based on Iterative Development and collaboration through the following steps:-
+	\begin{itemize}
+		\item Equation Analysis and Research
+		\item Handpicking interviewees
+		\item Designing personas from the interviews
+		\item Developing use cases
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Interview Summary}
+The Questioning method was based on the funnel model to extract basic information for the Personas from the Interviews conducted in a semi-structured manner.
+    \begin{itemize}
+		\item A set of 29 questions were finalized
+		\item Interviews were set up to be open ended and diverse
+		\item Over 12 interviews were conducted in total
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Example of question's asked}
+   \begin{itemize}
+		\item What tasks or jobs would you say you mostly do in your field of study/work?
+		\item Are there any functions you feel should be included in a Scientific Calculator but aren’t?
+		\item What function/ functions do you usually need from a Scientific Calculator most?
+		\item What should the precision for a Scientific Calculator be?
+		\item When using a calculator do you prefer to receive a step by step solution or simply a final answer?
+		\item Do you think a history is essential for a calculator? If yes, how big should the history be?
+	\end{itemize}
+\end{frame}
+
+
+\section{Research and Planning: Personas}
+
+
+\begin{frame}{Persona Template}
+    \begin{itemize}
+		\item Name
+		\item Gender
+		\item Age
+		\item Disabilities and restrictions
+		\item Education
+		\item Profession
+		\item Values    
+		\item Goals
+		\item Frustrations
+		\item Hobbies
+		\item Needs
+		\item Location of Use
+		\item Computer Literacy
+		\item Special needs when using a computer 
+		\item Mathematical proficiency
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Types of personas}
+  \item \textbf{Two broad categories of Users/Personas:-}
+    \begin{enumerate}
+   \item Student's
+   \item Professional's
+   \end{enumerate}
+ 
+\end{frame}
+
+\begin{frame}[fragile]{Example of a Student Persona}
+	\vspace*{-6.5mm}    
+    \hspace*{-13mm}
+    \includegraphics[width=\paperwidth]{anas_student_persona.png}
+\end{frame}
+
+\begin{frame}[fragile]{Example of a Professional Persona}
+	\vspace*{-3.5mm}    
+    \hspace*{-11mm}
+    \includegraphics[width=\paperwidth]{erfanpersona.png}
+\end{frame}
+
+\begin{frame}{Interview Analysis}
+	\textbf{The following information was inferred by the team after conducting the interviews:-}
+	\begin{itemize}
+		\item Interviewee's preferred a digital calculator over Handheld
+		\item Access to calculator history is a must
+		\item Interviewee's requested for a simpler UI 
+		\item Option for step by step solution
+		\item Most interviewee's did not use the transcendental function on a regular basis
+	\end{itemize}
+	\textbf{Key Takeaways}: Calculator needs to be \textbf{Simple}, to have a \textbf{History}, to offer \textbf{Step by step solution}.
+\end{frame}
+
+\begin{frame}{Use Case}
+	\vspace*{-1.5mm}    
+    \hspace*{-11mm}
+    \includegraphics[width=\paperwidth]{usecase.png}
+\end{frame}
+
+
+\section{Technologies}
+
+\begin{frame}[fragile]{Technologies Used}
+      \begin{itemize}
+          \item Python 3.9
+          \item Flask 2.0
+          \item Angular 8
+          \item Pytest
+          \item GitHub pages for hosting
+          \item Overleaf
+          \item Google Docs
+          \item Visual Paradigm for visualization
+      \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Summary}
+
+  Get the source of the project on 
+
+  \begin{center}\url{github.com/rmanaem/eternity/tree/master}\end{center}
+
+  \begin{center}\ccbysa\end{center}
+
+\end{frame}
+
+{\setbeamercolor{palette primary}{fg=black, bg=yellow}
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+}
+
+
+\end{document}
