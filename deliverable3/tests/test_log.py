@@ -28,7 +28,7 @@ def test_log_answer1():
 
 
 def test_log_answer2():
-    assert(answer1 - math.log(function2.argument, function2.base) < 0.0000000001)
+    assert(answer2 - math.log(function2.argument, function2.base) < 0.0000000001)
 
 
 print("The answer for log(1/2)(100) is %.10f" % answer1)
