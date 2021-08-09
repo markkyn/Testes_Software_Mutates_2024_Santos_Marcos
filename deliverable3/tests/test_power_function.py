@@ -3,11 +3,6 @@ sys.path.insert(0, './deliverable3/src')
 from power_function import PowerFunction
 
 
-
-##For base: enter 10
-# base = input("Enter your base: ")
-# ##For exponent: enter 2
-# exponent = input("Enter your exponent: ")
 test = PowerFunction(10, 2)
 
 def test_exponential_function():
