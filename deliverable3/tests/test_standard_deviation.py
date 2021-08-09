@@ -16,9 +16,10 @@ import math
 # Prior to running unit tests using pytest
 # the input test must be commented out
 print('Set of values: 2**(1/2), ((3**(1/3))/2, 4**7, 13/4, sin(333), cos(963), 17')
-std = StandardDeviation(2**(1./2), (3**(1./3))/2, 4**7, 13/4, math.sin(333), math.cos(963), 17)
+numbers = [2**(1./2), (3**(1./3))/2, 4**7, 13/4, math.sin(333), math.cos(963), 17]
+std = StandardDeviation(numbers)
 
-# Unit tests
+# Unit tests done by comparing results from an online calculator: https://www.calculator.net/standard-deviation-calculator.html
 
 
 def test_mean():
