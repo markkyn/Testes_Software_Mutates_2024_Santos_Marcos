@@ -15,7 +15,7 @@ class StandardDeviation:
 
     _n_values = 0
 
-    def __init__(self, *values):
+    def __init__(self, values):
         """
         Class constructor initializes _values with the given values,
         increments _n_values based on the number of values, and initializes
@@ -38,7 +38,7 @@ class StandardDeviation:
         """ Accessor for _values. """
         return self._values
 
-    def set_values(self, *values):
+    def set_values(self, values):
         """
         Mutator for _values that updates other
         attributes based on the new set values.
@@ -73,7 +73,7 @@ class StandardDeviation:
         """ Accessor for _ssd. """
         return self._ssd
 
-    def add_values(self, *values):
+    def add_values(self, values):
         """
         Utility function that adds values to the existing set of values
         and updates the other attributes based on the new set of values.

@@ -1,3 +1,4 @@
+# coding=utf-8
 # ExponentialFunction class is used for evaluating Exponential Function ab^x
 # The instance of the class is then stored in calculator history
 class ExponentialFunction:
