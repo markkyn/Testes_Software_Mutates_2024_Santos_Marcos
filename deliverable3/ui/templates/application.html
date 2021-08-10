@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<link>
+  <title>Eternity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/style.css') }}>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  
+
+  
+  
+</head>
+<body>
+
+
+    <h1>Eternity - Team F</h1>
+    <hr  style="height: 1px;
+    color: #123455;
+    background-color: #123455;
+    border: none;
+    margin: 0;" />
+
+
+
+  <div class="maincalc">
+
+
+  <div type="text" class="caltop"> 0</div>
+      <input type="hidden" id="string1">
+      <input type="hidden" id="temp">
+
+
+  <div class="calbottom">
+
+    <button type="button" class="num" value="7">7</button>
+    <button type="button" class="num" value="8">8</button>
+    <button type="button" class="num" value="9">9</button>
+    <button type="button" class="num" value="+">+</button>
+
+    <button type="button" class="num" value="4">4</button>
+    <button type="button" class="num" value="5">5</button>
+    <button type="button" class="num" value="6">6</button>
+     <button type="button" class="num" value="-">-</button>
+
+    <button type="button" class="num" value="1">1</button>
+    <button type="button" class="num" value="2">2</button>
+    <button type="button" class="num" value="3">3</button>
+    <button type="button" class="num"value="*">&times;</button>
+
+    <button type="button" class="num" value=".">.</button>
+    <button type="button" class="num" value="0">0</button>
+    <button type="button" class="num" value="/">&divide;</button>
+    <div class="dropdown">
+      <button class="dropbtn">fn-></button>
+        <div class="dropdown-content">
+         <ul>
+         <li><button type="button" class="num" value="aCos">aCos</button></li>
+         <li><button type="button" class="num" value="exp">exp</button></li>
+         <li><button type="button" class="num" value="log">log<sub>b</sub>x</button></li>
+         <li><button type="button" class="num" value="mad">MAD</button></li>
+         <li><button type="button" class="num" value="sSD">ssd</button></li>
+         <li><button type="button" class="num" value="pSD">psd</button></li>
+         <li><button type="button" class="num" value="sinh">sinh</button></li>
+         <li><button type="button" class="num" value="pow">pow</button></li>
+         </ul>
+        </div>
+    </div>
+
+
+    <div class="dropdown-2">
+      <button class="dropbtn-2">{}</button>
+        <div class="dropdown-content-2">
+         <ul>
+         <li><button type="button" class="num" value="(">(</button></li>
+         <li><button type="button" class="num" value=")">)</button></li>
+         <li><button type="button" class="num" value="[">[</button></li>
+         <li><button type="button" class="num" value="]">]</button></li>
+         <li><button type="button" class="num" value=",">,</button></li>
+         </ul>
+        </div>
+    </div>
+    <button type="button" class="num" value=".">π</button>
+    <button type="button" class="clear" value="clear">AC</button>
+    <button type="button" class="eq" value="=">=</button>
+
+
+
+
+
+</div>
+  </div>
+
+
+</body>
+</html>
+
