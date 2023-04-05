@@ -1,4 +1,4 @@
-import exceptions
+from . import exceptions
 
 
 # LogFunction class is used to calculate the logarithm expression logb(x)
