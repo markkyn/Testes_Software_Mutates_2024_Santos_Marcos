@@ -1,4 +1,4 @@
-# Eternity# Eternity
+# Eternity
 
 ## Instructions for running the unit tests
 
