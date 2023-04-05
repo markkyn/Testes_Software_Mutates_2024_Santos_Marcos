@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, './deliverable3/src')
+sys.path.insert(0, './src')
 from power_function import PowerFunction
 
 

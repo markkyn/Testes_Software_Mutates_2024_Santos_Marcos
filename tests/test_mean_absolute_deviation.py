@@ -10,7 +10,7 @@ value to ensure the margin of error remains within
 """
 
 import sys
-sys.path.insert(0, './deliverable3/src')
+sys.path.insert(0, './src')
 from mean_absolute_deviation import MeanAbsoluteDeviation
 import math
 

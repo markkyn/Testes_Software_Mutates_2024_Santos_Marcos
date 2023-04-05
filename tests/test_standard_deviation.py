@@ -9,7 +9,7 @@ and _sample_standard_deviation functions.
 """
 
 import sys
-sys.path.insert(0, './deliverable3/src')
+sys.path.insert(0, './src')
 from standard_deviation import StandardDeviation
 import math
 

@@ -1,6 +1,6 @@
 
 import sys
-sys.path.insert(0, './deliverable3/src')
+sys.path.insert(0, './src')
 from log import LogFunction
 import math
 

@@ -1,6 +1,6 @@
 import math
 import sys
-sys.path.insert(0, './deliverable3/src')
+sys.path.insert(0, './src')
 from inverse_cosine import InverseCosine
 
 pi = 3.141592653589793238462643383279502884197
