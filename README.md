@@ -66,3 +66,7 @@ or run individual tests (e.g., unit-test for standard_deviation.py module) by ex
 ```bash
 pytest tests/test_standard_deviation.py
 ```
+
+## License
+
+Eternity is licensed under the terms of the [MIT License](LICENSE).
