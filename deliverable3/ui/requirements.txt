@@ -1,4 +1,0 @@
-Flask==1.1.2
-logarithm==0.0.2
-mad==0.2.2
-gunicorn==19.10.0
