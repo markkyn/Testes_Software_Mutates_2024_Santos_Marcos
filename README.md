@@ -1,5 +1,7 @@
 # Eternity
 
+A scientific calculator developed in python that offers a web-based user interface implemented using [Flask](https://flask.palletsprojects.com/en/2.2.x/).
+
 ## Instructions for running the unit tests
 
 In order to run the unit tests you will need to install pytest.
