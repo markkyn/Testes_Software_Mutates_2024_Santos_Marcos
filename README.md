@@ -49,3 +49,20 @@ If the UI starts with no issues, you should see a set of outputs similar to the 
 ```
 
 As the last output mentions, you can now access the UI app at http://127.0.0.1:5000/.
+
+### Testing
+
+Eternity utilizes [pytest]() framework for testing.
+A set of unit-tests, located in `tests` directory, were implemented for Eternity core modules.
+
+You can run all the tests by executing the following command in your terminal:
+
+```bash
+pytest tests
+```
+
+or run individual tests (e.g., unit-test for standard_deviation.py module) by executing the following command in your terminal:
+
+```bash
+pytest tests/test_standard_deviation.py
+```
