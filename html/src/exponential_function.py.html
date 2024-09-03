@@ -1,0 +1,423 @@
+<html><body><h1>./src/exponential_function.py</h1>Killed 14 out of 53 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 1</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -9,7 +9,7 @@
+     # exp_num = x in the function, which is the power the base is multiplied by
+     # answer, which is the answer after calculating
+     def __init__(self, mult_num, base_num, exp_num):
+-        self.mult_num = mult_num
++        self.mult_num = None
+         self.base_num = base_num
+         self.exp_num = exp_num
+         self.answer = 0
+</pre><h3>Mutant 2</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -10,7 +10,7 @@
+     # answer, which is the answer after calculating
+     def __init__(self, mult_num, base_num, exp_num):
+         self.mult_num = mult_num
+-        self.base_num = base_num
++        self.base_num = None
+         self.exp_num = exp_num
+         self.answer = 0
+ 
+</pre><h3>Mutant 3</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -11,7 +11,7 @@
+     def __init__(self, mult_num, base_num, exp_num):
+         self.mult_num = mult_num
+         self.base_num = base_num
+-        self.exp_num = exp_num
++        self.exp_num = None
+         self.answer = 0
+ 
+     # set_mult_num sets the value of mult_num
+</pre><h3>Mutant 4</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -12,7 +12,7 @@
+         self.mult_num = mult_num
+         self.base_num = base_num
+         self.exp_num = exp_num
+-        self.answer = 0
++        self.answer = 1
+ 
+     # set_mult_num sets the value of mult_num
+     def set_mult_num(self, m_num):
+</pre><h3>Mutant 5</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -12,7 +12,7 @@
+         self.mult_num = mult_num
+         self.base_num = base_num
+         self.exp_num = exp_num
+-        self.answer = 0
++        self.answer = None
+ 
+     # set_mult_num sets the value of mult_num
+     def set_mult_num(self, m_num):
+</pre><h3>Mutant 6</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -20,7 +20,7 @@
+         # Then set mult_num to numerator/denominator
+         # If there is a division by zero, the exception is caught and the
+         # ZeroDivisionError is raised
+-        if '/' in m_num:
++        if 'XX/XX' in m_num:
+             try:
+                 num, den = m_num.split('/')
+                 if float(den) == 0:
+</pre><h3>Mutant 8</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -22,7 +22,7 @@
+         # ZeroDivisionError is raised
+         if '/' in m_num:
+             try:
+-                num, den = m_num.split('/')
++                num, den = m_num.split('XX/XX')
+                 if float(den) == 0:
+                     raise ZeroDivisionError
+                 self.mult_num = float(num) / float(den)
+</pre><h3>Mutant 9</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -22,7 +22,7 @@
+         # ZeroDivisionError is raised
+         if '/' in m_num:
+             try:
+-                num, den = m_num.split('/')
++                num, den = None
+                 if float(den) == 0:
+                     raise ZeroDivisionError
+                 self.mult_num = float(num) / float(den)
+</pre><h3>Mutant 10</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -23,7 +23,7 @@
+         if '/' in m_num:
+             try:
+                 num, den = m_num.split('/')
+-                if float(den) == 0:
++                if float(den) != 0:
+                     raise ZeroDivisionError
+                 self.mult_num = float(num) / float(den)
+                 return self.mult_num
+</pre><h3>Mutant 11</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -23,7 +23,7 @@
+         if '/' in m_num:
+             try:
+                 num, den = m_num.split('/')
+-                if float(den) == 0:
++                if float(den) == 1:
+                     raise ZeroDivisionError
+                 self.mult_num = float(num) / float(den)
+                 return self.mult_num
+</pre><h3>Mutant 12</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -25,7 +25,7 @@
+                 num, den = m_num.split('/')
+                 if float(den) == 0:
+                     raise ZeroDivisionError
+-                self.mult_num = float(num) / float(den)
++                self.mult_num = float(num) * float(den)
+                 return self.mult_num
+             except ZeroDivisionError:
+                 return None
+</pre><h3>Mutant 13</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -25,7 +25,7 @@
+                 num, den = m_num.split('/')
+                 if float(den) == 0:
+                     raise ZeroDivisionError
+-                self.mult_num = float(num) / float(den)
++                self.mult_num = None
+                 return self.mult_num
+             except ZeroDivisionError:
+                 return None
+</pre><h3>Mutant 15</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -39,7 +39,7 @@
+         # If bNum is a fraction, then split into numerator and denominator
+         # If there is a division by zero, the exception is caught and
+         # The function returns None
+-        if '/' in b_num:
++        if 'XX/XX' in b_num:
+             try:
+                 num, den = b_num.split('/')
+                 if float(den) == 0:
+</pre><h3>Mutant 17</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -41,7 +41,7 @@
+         # The function returns None
+         if '/' in b_num:
+             try:
+-                num, den = b_num.split('/')
++                num, den = b_num.split('XX/XX')
+                 if float(den) == 0:
+                     raise ZeroDivisionError
+                 self.base_num = float(num) / float(den)
+</pre><h3>Mutant 18</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -41,7 +41,7 @@
+         # The function returns None
+         if '/' in b_num:
+             try:
+-                num, den = b_num.split('/')
++                num, den = None
+                 if float(den) == 0:
+                     raise ZeroDivisionError
+                 self.base_num = float(num) / float(den)
+</pre><h3>Mutant 19</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -42,7 +42,7 @@
+         if '/' in b_num:
+             try:
+                 num, den = b_num.split('/')
+-                if float(den) == 0:
++                if float(den) != 0:
+                     raise ZeroDivisionError
+                 self.base_num = float(num) / float(den)
+                 return self.base_num
+</pre><h3>Mutant 20</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -42,7 +42,7 @@
+         if '/' in b_num:
+             try:
+                 num, den = b_num.split('/')
+-                if float(den) == 0:
++                if float(den) == 1:
+                     raise ZeroDivisionError
+                 self.base_num = float(num) / float(den)
+                 return self.base_num
+</pre><h3>Mutant 21</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -44,7 +44,7 @@
+                 num, den = b_num.split('/')
+                 if float(den) == 0:
+                     raise ZeroDivisionError
+-                self.base_num = float(num) / float(den)
++                self.base_num = float(num) * float(den)
+                 return self.base_num
+             except ZeroDivisionError:
+                 # Raise ZeroDivisionError
+</pre><h3>Mutant 22</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -44,7 +44,7 @@
+                 num, den = b_num.split('/')
+                 if float(den) == 0:
+                     raise ZeroDivisionError
+-                self.base_num = float(num) / float(den)
++                self.base_num = None
+                 return self.base_num
+             except ZeroDivisionError:
+                 # Raise ZeroDivisionError
+</pre><h3>Mutant 29</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -63,7 +63,7 @@
+         if '/' in e_num:
+             try:
+                 num, den = e_num.split('/')
+-                if float(den) == 0:
++                if float(den) == 1:
+                     raise ZeroDivisionError
+                 self.exp_num = float(num) / float(den)
+                 return self.exp_num
+</pre><h3>Mutant 32</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -73,7 +73,7 @@
+                 return None
+         # Else, set exp_num to float of bNum
+         else:
+-            self.exp_num = float(e_num)
++            self.exp_num = None
+             return self.exp_num
+             
+     # get_mult_num returns the value of mult_num
+</pre><h3>Mutant 36</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -104,7 +104,7 @@
+     #   https://www.geeksforgeeks.org/how-to-print-superscript-and-subscript-in
+     #   -python/
+     def get_super(x):
+-        normal = ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" 
++        normal = ("XXABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzXX" 
+                     "0123456789+-=()")
+         super_s = ("ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ" 
+                     "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾")
+</pre><h3>Mutant 37</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -105,7 +105,7 @@
+     #   -python/
+     def get_super(x):
+         normal = ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" 
+-                    "0123456789+-=()")
++                    "XX0123456789+-=()XX")
+         super_s = ("ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ" 
+                     "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾")
+         res = x.maketrans(''.join(normal), ''.join(super_s))
+</pre><h3>Mutant 38</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -104,8 +104,7 @@
+     #   https://www.geeksforgeeks.org/how-to-print-superscript-and-subscript-in
+     #   -python/
+     def get_super(x):
+-        normal = ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" 
+-                    "0123456789+-=()")
++        normal = None
+         super_s = ("ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ" 
+                     "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾")
+         res = x.maketrans(''.join(normal), ''.join(super_s))
+</pre><h3>Mutant 39</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -106,7 +106,7 @@
+     def get_super(x):
+         normal = ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" 
+                     "0123456789+-=()")
+-        super_s = ("ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ" 
++        super_s = ("XXᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻXX" 
+                     "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾")
+         res = x.maketrans(''.join(normal), ''.join(super_s))
+         return x.translate(res)
+</pre><h3>Mutant 40</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -107,7 +107,7 @@
+         normal = ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" 
+                     "0123456789+-=()")
+         super_s = ("ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ" 
+-                    "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾")
++                    "XX⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾XX")
+         res = x.maketrans(''.join(normal), ''.join(super_s))
+         return x.translate(res)
+         
+</pre><h3>Mutant 41</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -106,8 +106,7 @@
+     def get_super(x):
+         normal = ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" 
+                     "0123456789+-=()")
+-        super_s = ("ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ" 
+-                    "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾")
++        super_s = None
+         res = x.maketrans(''.join(normal), ''.join(super_s))
+         return x.translate(res)
+         
+</pre><h3>Mutant 42</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -108,7 +108,7 @@
+                     "0123456789+-=()")
+         super_s = ("ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ" 
+                     "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾")
+-        res = x.maketrans(''.join(normal), ''.join(super_s))
++        res = x.maketrans('XXXX'.join(normal), ''.join(super_s))
+         return x.translate(res)
+         
+     # str function is used to display the exponential function 
+</pre><h3>Mutant 43</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -108,7 +108,7 @@
+                     "0123456789+-=()")
+         super_s = ("ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ" 
+                     "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾")
+-        res = x.maketrans(''.join(normal), ''.join(super_s))
++        res = x.maketrans(''.join(normal), 'XXXX'.join(super_s))
+         return x.translate(res)
+         
+     # str function is used to display the exponential function 
+</pre><h3>Mutant 44</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -108,7 +108,7 @@
+                     "0123456789+-=()")
+         super_s = ("ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ" 
+                     "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾")
+-        res = x.maketrans(''.join(normal), ''.join(super_s))
++        res = None
+         return x.translate(res)
+         
+     # str function is used to display the exponential function 
+</pre><h3>Mutant 45</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -113,7 +113,7 @@
+         
+     # str function is used to display the exponential function 
+     def __str__(self):
+-        return (str(self.mult_num) + '(' + str(self.base_num) 
++        return (str(self.mult_num) - '(' + str(self.base_num) 
+                 + ExponentialFunction.get_super(str(self.exp_num)) + ')' 
+                 + ' = ' + str(self.answer))
+ 
+</pre><h3>Mutant 46</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -113,7 +113,7 @@
+         
+     # str function is used to display the exponential function 
+     def __str__(self):
+-        return (str(self.mult_num) + '(' + str(self.base_num) 
++        return (str(self.mult_num) + 'XX(XX' + str(self.base_num) 
+                 + ExponentialFunction.get_super(str(self.exp_num)) + ')' 
+                 + ' = ' + str(self.answer))
+ 
+</pre><h3>Mutant 47</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -113,7 +113,7 @@
+         
+     # str function is used to display the exponential function 
+     def __str__(self):
+-        return (str(self.mult_num) + '(' + str(self.base_num) 
++        return (str(self.mult_num) + '(' - str(self.base_num) 
+                 + ExponentialFunction.get_super(str(self.exp_num)) + ')' 
+                 + ' = ' + str(self.answer))
+ 
+</pre><h3>Mutant 48</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -114,6 +114,6 @@
+     # str function is used to display the exponential function 
+     def __str__(self):
+         return (str(self.mult_num) + '(' + str(self.base_num) 
+-                + ExponentialFunction.get_super(str(self.exp_num)) + ')' 
++                - ExponentialFunction.get_super(str(self.exp_num)) + ')' 
+                 + ' = ' + str(self.answer))
+ 
+</pre><h3>Mutant 49</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -114,6 +114,6 @@
+     # str function is used to display the exponential function 
+     def __str__(self):
+         return (str(self.mult_num) + '(' + str(self.base_num) 
+-                + ExponentialFunction.get_super(str(self.exp_num)) + ')' 
++                + ExponentialFunction.get_super(str(self.exp_num)) - ')' 
+                 + ' = ' + str(self.answer))
+ 
+</pre><h3>Mutant 50</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -114,6 +114,6 @@
+     # str function is used to display the exponential function 
+     def __str__(self):
+         return (str(self.mult_num) + '(' + str(self.base_num) 
+-                + ExponentialFunction.get_super(str(self.exp_num)) + ')' 
++                + ExponentialFunction.get_super(str(self.exp_num)) + 'XX)XX' 
+                 + ' = ' + str(self.answer))
+ 
+</pre><h3>Mutant 51</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -115,5 +115,5 @@
+     def __str__(self):
+         return (str(self.mult_num) + '(' + str(self.base_num) 
+                 + ExponentialFunction.get_super(str(self.exp_num)) + ')' 
+-                + ' = ' + str(self.answer))
++                - ' = ' + str(self.answer))
+ 
+</pre><h3>Mutant 52</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -115,5 +115,5 @@
+     def __str__(self):
+         return (str(self.mult_num) + '(' + str(self.base_num) 
+                 + ExponentialFunction.get_super(str(self.exp_num)) + ')' 
+-                + ' = ' + str(self.answer))
++                + 'XX = XX' + str(self.answer))
+ 
+</pre><h3>Mutant 53</h3><pre>--- ./src/exponential_function.py
++++ ./src/exponential_function.py
+@@ -115,5 +115,5 @@
+     def __str__(self):
+         return (str(self.mult_num) + '(' + str(self.base_num) 
+                 + ExponentialFunction.get_super(str(self.exp_num)) + ')' 
+-                + ' = ' + str(self.answer))
++                + ' = ' - str(self.answer))
+ 
+</pre></body></html>

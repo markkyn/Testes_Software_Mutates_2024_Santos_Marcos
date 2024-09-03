@@ -1,0 +1,395 @@
+<html><body><h1>./src/standard_deviation.py</h1>Killed 43 out of 79 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 445</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -23,7 +23,7 @@
+         In case no values are passed _values and _n_values are
+         both set to None. 
+         """
+-        if len(values) == 0:
++        if len(values) == 1:
+             self._values = None
+             self._n_values = None
+         else:
+</pre><h3>Mutant 446</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -24,7 +24,7 @@
+         both set to None. 
+         """
+         if len(values) == 0:
+-            self._values = None
++            self._values = ""
+             self._n_values = None
+         else:
+             self._values = values
+</pre><h3>Mutant 447</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -25,7 +25,7 @@
+         """
+         if len(values) == 0:
+             self._values = None
+-            self._n_values = None
++            self._n_values = ""
+         else:
+             self._values = values
+             for v in values:
+</pre><h3>Mutant 455</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -45,7 +45,7 @@
+         In case no values are passed _values 
+         and _n_values are both set to None.
+         """
+-        if len(values) == 0:
++        if len(values) != 0:
+             self._values = None
+             self._n_values = None
+         else:
+</pre><h3>Mutant 456</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -45,7 +45,7 @@
+         In case no values are passed _values 
+         and _n_values are both set to None.
+         """
+-        if len(values) == 0:
++        if len(values) == 1:
+             self._values = None
+             self._n_values = None
+         else:
+</pre><h3>Mutant 457</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -46,7 +46,7 @@
+         and _n_values are both set to None.
+         """
+         if len(values) == 0:
+-            self._values = None
++            self._values = ""
+             self._n_values = None
+         else:
+             self._values = values
+</pre><h3>Mutant 458</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -47,7 +47,7 @@
+         """
+         if len(values) == 0:
+             self._values = None
+-            self._n_values = None
++            self._n_values = ""
+         else:
+             self._values = values
+             self._n_values = 0
+</pre><h3>Mutant 459</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -49,7 +49,7 @@
+             self._values = None
+             self._n_values = None
+         else:
+-            self._values = values
++            self._values = None
+             self._n_values = 0
+             for v in values:
+                 self._n_values += 1
+</pre><h3>Mutant 460</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -50,7 +50,7 @@
+             self._n_values = None
+         else:
+             self._values = values
+-            self._n_values = 0
++            self._n_values = 1
+             for v in values:
+                 self._n_values += 1
+         self._mean = self.__mean()
+</pre><h3>Mutant 461</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -50,7 +50,7 @@
+             self._n_values = None
+         else:
+             self._values = values
+-            self._n_values = 0
++            self._n_values = None
+             for v in values:
+                 self._n_values += 1
+         self._mean = self.__mean()
+</pre><h3>Mutant 462</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -52,7 +52,7 @@
+             self._values = values
+             self._n_values = 0
+             for v in values:
+-                self._n_values += 1
++                self._n_values = 1
+         self._mean = self.__mean()
+         self._psd = self._population_standard_deviation()
+         self._ssd = self._sample_standard_deviation()
+</pre><h3>Mutant 463</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -52,7 +52,7 @@
+             self._values = values
+             self._n_values = 0
+             for v in values:
+-                self._n_values += 1
++                self._n_values -= 1
+         self._mean = self.__mean()
+         self._psd = self._population_standard_deviation()
+         self._ssd = self._sample_standard_deviation()
+</pre><h3>Mutant 464</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -52,7 +52,7 @@
+             self._values = values
+             self._n_values = 0
+             for v in values:
+-                self._n_values += 1
++                self._n_values += 2
+         self._mean = self.__mean()
+         self._psd = self._population_standard_deviation()
+         self._ssd = self._sample_standard_deviation()
+</pre><h3>Mutant 465</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -53,7 +53,7 @@
+             self._n_values = 0
+             for v in values:
+                 self._n_values += 1
+-        self._mean = self.__mean()
++        self._mean = None
+         self._psd = self._population_standard_deviation()
+         self._ssd = self._sample_standard_deviation()
+ 
+</pre><h3>Mutant 466</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -54,7 +54,7 @@
+             for v in values:
+                 self._n_values += 1
+         self._mean = self.__mean()
+-        self._psd = self._population_standard_deviation()
++        self._psd = None
+         self._ssd = self._sample_standard_deviation()
+ 
+     def get_n_values(self):
+</pre><h3>Mutant 467</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -55,7 +55,7 @@
+                 self._n_values += 1
+         self._mean = self.__mean()
+         self._psd = self._population_standard_deviation()
+-        self._ssd = self._sample_standard_deviation()
++        self._ssd = None
+ 
+     def get_n_values(self):
+         """ Accessor for _n_values. """
+</pre><h3>Mutant 468</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -80,7 +80,7 @@
+         In case the set of values is empty _values and _n_values are
+         assigned to the passed values and length of values respectively.
+         """ 
+-        if self._values == None or self._n_values == None:
++        if self._values != None or self._n_values == None:
+             self._values = values
+             self._n_values = len(values)
+         else:           
+</pre><h3>Mutant 469</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -80,7 +80,7 @@
+         In case the set of values is empty _values and _n_values are
+         assigned to the passed values and length of values respectively.
+         """ 
+-        if self._values == None or self._n_values == None:
++        if self._values == None or self._n_values != None:
+             self._values = values
+             self._n_values = len(values)
+         else:           
+</pre><h3>Mutant 470</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -80,7 +80,7 @@
+         In case the set of values is empty _values and _n_values are
+         assigned to the passed values and length of values respectively.
+         """ 
+-        if self._values == None or self._n_values == None:
++        if self._values == None and self._n_values == None:
+             self._values = values
+             self._n_values = len(values)
+         else:           
+</pre><h3>Mutant 471</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -81,7 +81,7 @@
+         assigned to the passed values and length of values respectively.
+         """ 
+         if self._values == None or self._n_values == None:
+-            self._values = values
++            self._values = None
+             self._n_values = len(values)
+         else:           
+             self._values = self._values + values
+</pre><h3>Mutant 472</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -82,7 +82,7 @@
+         """ 
+         if self._values == None or self._n_values == None:
+             self._values = values
+-            self._n_values = len(values)
++            self._n_values = None
+         else:           
+             self._values = self._values + values
+             for v in values:
+</pre><h3>Mutant 473</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -84,7 +84,7 @@
+             self._values = values
+             self._n_values = len(values)
+         else:           
+-            self._values = self._values + values
++            self._values = self._values - values
+             for v in values:
+                 self._n_values += 1
+         self._mean = self.__mean()
+</pre><h3>Mutant 474</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -84,7 +84,7 @@
+             self._values = values
+             self._n_values = len(values)
+         else:           
+-            self._values = self._values + values
++            self._values = None
+             for v in values:
+                 self._n_values += 1
+         self._mean = self.__mean()
+</pre><h3>Mutant 475</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -86,7 +86,7 @@
+         else:           
+             self._values = self._values + values
+             for v in values:
+-                self._n_values += 1
++                self._n_values = 1
+         self._mean = self.__mean()
+         self._psd = self._population_standard_deviation()
+         self._ssd = self._sample_standard_deviation()
+</pre><h3>Mutant 476</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -86,7 +86,7 @@
+         else:           
+             self._values = self._values + values
+             for v in values:
+-                self._n_values += 1
++                self._n_values -= 1
+         self._mean = self.__mean()
+         self._psd = self._population_standard_deviation()
+         self._ssd = self._sample_standard_deviation()
+</pre><h3>Mutant 477</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -86,7 +86,7 @@
+         else:           
+             self._values = self._values + values
+             for v in values:
+-                self._n_values += 1
++                self._n_values += 2
+         self._mean = self.__mean()
+         self._psd = self._population_standard_deviation()
+         self._ssd = self._sample_standard_deviation()
+</pre><h3>Mutant 478</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -87,7 +87,7 @@
+             self._values = self._values + values
+             for v in values:
+                 self._n_values += 1
+-        self._mean = self.__mean()
++        self._mean = None
+         self._psd = self._population_standard_deviation()
+         self._ssd = self._sample_standard_deviation()
+ 
+</pre><h3>Mutant 479</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -88,7 +88,7 @@
+             for v in values:
+                 self._n_values += 1
+         self._mean = self.__mean()
+-        self._psd = self._population_standard_deviation()
++        self._psd = None
+         self._ssd = self._sample_standard_deviation()
+ 
+     def __mean(self):
+</pre><h3>Mutant 480</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -89,7 +89,7 @@
+                 self._n_values += 1
+         self._mean = self.__mean()
+         self._psd = self._population_standard_deviation()
+-        self._ssd = self._sample_standard_deviation()
++        self._ssd = None
+ 
+     def __mean(self):
+         """
+</pre><h3>Mutant 483</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -96,7 +96,7 @@
+         Private function that calculates the mean of the set.
+         In case the set of values is empty return None.
+         """
+-        if self._values is None or self._n_values is None:
++        if self._values is None and self._n_values is None:
+             return None
+         total = 0
+         for v in self._values:
+</pre><h3>Mutant 491</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -109,7 +109,7 @@
+         Private function that calculates the population standard deviation.
+         In case the set of values is empty return None.
+         """
+-        if self._values is None or self._n_values is None:
++        if self._values is None and self._n_values is None:
+             return None
+         total = 0
+         mean = self.__mean()
+</pre><h3>Mutant 506</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -123,7 +123,7 @@
+         Private function that calculates the sample standard deviation.
+         In case the set of values is empty return None.
+         """
+-        if self._values is None or self._n_values is None or self._n_values == 1:
++        if self._values is None or self._n_values is None or self._n_values == 2:
+             return None
+         total = 0
+         mean = self.__mean()
+</pre><h3>Mutant 507</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -123,7 +123,7 @@
+         Private function that calculates the sample standard deviation.
+         In case the set of values is empty return None.
+         """
+-        if self._values is None or self._n_values is None or self._n_values == 1:
++        if self._values is None and self._n_values is None or self._n_values == 1:
+             return None
+         total = 0
+         mean = self.__mean()
+</pre><h3>Mutant 511</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -128,7 +128,7 @@
+         total = 0
+         mean = self.__mean()
+         for v in self._values:
+-            total += (v - mean) ** 2
++            total = (v - mean) ** 2
+         
+         return (total / (self._n_values - 1)) ** 0.5
+ 
+</pre><h3>Mutant 514</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -128,7 +128,7 @@
+         total = 0
+         mean = self.__mean()
+         for v in self._values:
+-            total += (v - mean) ** 2
++            total += (v - mean) * 2
+         
+         return (total / (self._n_values - 1)) ** 0.5
+ 
+</pre><h3>Mutant 517</h3><pre>--- ./src/standard_deviation.py
++++ ./src/standard_deviation.py
+@@ -130,5 +130,5 @@
+         for v in self._values:
+             total += (v - mean) ** 2
+         
+-        return (total / (self._n_values - 1)) ** 0.5
++        return (total / (self._n_values + 1)) ** 0.5
+ 
+</pre></body></html>

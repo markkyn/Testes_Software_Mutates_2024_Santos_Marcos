@@ -1,0 +1,45 @@
+<html><body><h1>./src/hyperbolic_sine.py</h1>Killed 9 out of 13 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 55</h3><pre>--- ./src/hyperbolic_sine.py
++++ ./src/hyperbolic_sine.py
+@@ -17,7 +17,7 @@
+ 
+     def __init__(self, value):
+         self._value = value
+-        self._euler_num = math.e
++        self._euler_num = None
+         self._sinh = 0
+ 
+     # In this function we calculate e^x and return the value
+</pre><h3>Mutant 56</h3><pre>--- ./src/hyperbolic_sine.py
++++ ./src/hyperbolic_sine.py
+@@ -18,7 +18,7 @@
+     def __init__(self, value):
+         self._value = value
+         self._euler_num = math.e
+-        self._sinh = 0
++        self._sinh = 1
+ 
+     # In this function we calculate e^x and return the value
+     def _calculate_exponential(self, value):
+</pre><h3>Mutant 57</h3><pre>--- ./src/hyperbolic_sine.py
++++ ./src/hyperbolic_sine.py
+@@ -18,7 +18,7 @@
+     def __init__(self, value):
+         self._value = value
+         self._euler_num = math.e
+-        self._sinh = 0
++        self._sinh = None
+ 
+     # In this function we calculate e^x and return the value
+     def _calculate_exponential(self, value):
+</pre><h3>Mutant 66</h3><pre>--- ./src/hyperbolic_sine.py
++++ ./src/hyperbolic_sine.py
+@@ -40,7 +40,7 @@
+ 
+     # Set instanced value
+     def set_value(self, new_value):
+-        self._value = new_value
++        self._value = None
+ 
+     # Returns the Sinh value
+     def get_sinh(self):
+</pre></body></html>

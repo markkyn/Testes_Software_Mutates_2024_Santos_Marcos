@@ -1,72 +1,155 @@
-# Eternity
+# Testes de Software - Eternity
 
-A scientific calculator developed in python that offers a web-based user interface implemented using [Flask](https://flask.palletsprojects.com/en/2.2.x/).
+Aluno: Marcos Gabriel da Silva Santos
 
-## Development
 
-Development process of Eternity included various elements of Agile methodology including:
+## Documentação
+Documentação da atividade: 
 
-- Conducting interviews with potential users
-- Creating personas for potential users
-- Gathering use cases based on analysis of interviews and personas
-- Documenting functionalities
-- Creating Class Responsability Collborator (CRC) models
+## Instalação
 
-along common software development practices such as testing, debugging, and code reviewing.
+### 1. Instalação do ambiente
+Com o python instalado realize a instalação da biblioteca do ambiente.
 
-## Local Setup
-
-The core of Eternity, located in `src` directory, is implemented in vanilla python and can be used as is.
-
-To run the user interface and tests you will need to install the dependencies outlined in [requirements.txt](requirements.txt). For convenience, you can use Python's `venv` package to install dependencies in a virtual environment. You can find the instructions on creating and activating a virtual environment in the official [documentation](https://docs.python.org/3.10/library/venv.html). After setting up and activating your environment, you can install the dependencies by running the following command in your terminal:
-
+No Linux
 ```bash
-pip install -r requirements.txt
-```
+  pip install virtualenv
 
-### UI
+  virtualenv -p python3 venv
 
-The web-based user interface developed in Flask can be located in `ui` directory. To run the UI, move to the `ui` directory by running the following command in your terminal:
-
-```bash
-cd ui
-```
-
-You can then launch the UI application by running the follwoing by running the following command in your terminal:
-
-```bash
-flask run
-```
-
-If the UI starts with no issues, you should see a set of outputs similar to the one below in your terminal:
+  source venv/bin/activate
 
 ```
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+### 4. Instalação de Dependências
+Dentro do ambiente instale as dependências
+
+```
+  pip install -r requirements.txt
 ```
 
-As the last output mentions, you can now access the UI app at http://127.0.0.1:5000/.
 
-### Testing
+### 3. Execução do Projeto
+Agora basta executar o projeto
 
-Eternity utilizes [pytest]() framework for testing.
-A set of unit-tests, located in `tests` directory, were implemented for Eternity core modules.
+```
+  cd ui
 
-You can run all the tests by executing the following command in your terminal:
-
-```bash
-pytest tests
+  flask run
 ```
 
-or run individual tests (e.g., unit-test for standard_deviation.py module) by executing the following command in your terminal:
+Com o projeto rodando você pode acessar http://localhost:5000/ para acessar a calculadora ciêntífica do projeto base
+![alt text](image-1.png)
+## Testes
 
-```bash
-pytest tests/test_standard_deviation.py
+Para executar os testes siga esse passo a passo
+
+### 1. Testes Unitários
+
+```
+  pytests tests
 ```
 
-## License
+### 2. Cobertura de Testes
+```
+  pytests --cov tests
+```
 
-Eternity is licensed under the terms of the [MIT License](LICENSE).
+É esperado que apareça no terminal a seguinte tabela de cobertura.
+
+```
+---------- coverage: platform linux, python 3.10.12-final-0 ----------
+Name                                    Stmts   Miss  Cover
+-----------------------------------------------------------
+tests/test_exponential_function.py         21      0   100%
+tests/test_hyperbolic_sine.py               8      0   100%
+tests/test_inverse_cosine.py               10      0   100%
+tests/test_log.py                          19      0   100%
+tests/test_mean_absolute_deviation.py      12      1    92%
+tests/test_power_function.py                7      0   100%
+tests/test_standard_deviation.py           16      0   100%
+-----------------------------------------------------------
+TOTAL                                      93      1    99%
+```
+
+### 3. Report de Cobertura
+```
+  pytest --cov --cov-report=html tests/ 
+```
+
+Acessando com um clinte web o arquivo `index.html` localizada na pasta html
+
+![alt text](image.png)
+
+
+### 4. Testes de Mutação
+
+Para executar  o teste de mutação utilizando o `mutmut`, use o seguinte comando:
+
+```
+  mutmut run --paths-to-mutate=./src
+```
+
+é esperado que o comando retorne o seguinte:
+
+```
+  mutmut cache is out of date, clearing it...
+  1. Running tests without mutations
+  ⠦ Running...Done
+
+  2. Checking mutants
+  ⠼ 520/520  🎉 152  ⏰ 0  🤔 1  🙁 367  🔇 0
+```
+
+Para cada teste é possivel gerar o relatório das mutações realizadas. Utilize o comando:
+
+```
+  mutmut results
+```
+
+e 
+```
+  mutmut show
+```
+
+Que irá retornar os sobreviventes no seguinte formato:
+
+```
+  Survived 🙁 (367)
+
+  ---- ./src/exponential_function.py (39) ----
+
+  1-6, 8-13, 15, 17-22, 29, 32, 36-53
+
+  ---- ./src/hyperbolic_sine.py (4) ----
+
+  55-57, 66
+
+  ---- ./src/inverse_cosine.py (41) ----
+
+  69-70, 72-76, 78-80, 82, 84, 87-89, 92-97, 99-101, 103-107, 109-110, 112-120, 123
+
+  ---- ./src/log.py (43) ----
+
+  131-134, 139, 141, 146, 149-173, 181-182, 184, 190, 194-195, 201-203, 206-207
+
+  ---- ./src/mean_absolute_deviation.py (12) ----
+
+  212-216, 225, 230-231, 234-235, 237, 244
+
+  ---- ./src/parser.py (165) ----
+
+  245-409
+```
+
+### 5. Report de Testes de Mutação
+Para gerar um comando em HTML do testes de mutação realizados utilze o comando
+
+```
+mutmut html
+```
+
+Esse comando irá gerar uma pasta `html` contendo o `index.html` da aplicação, abra utilizando seu navegador
+![alt text](image-2.png)
+
+## Ajustes

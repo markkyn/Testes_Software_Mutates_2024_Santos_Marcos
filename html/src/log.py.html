@@ -1,0 +1,485 @@
+<html><body><h1>./src/log.py</h1>Killed 35 out of 79 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 131</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -9,7 +9,7 @@
+     # result is represent the final calculated result
+     def __init__(self, base, argument):
+ 
+-        self.base = base
++        self.base = None
+         self.argument = argument
+         self.result = 0
+ 
+</pre><h3>Mutant 132</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -10,7 +10,7 @@
+     def __init__(self, base, argument):
+ 
+         self.base = base
+-        self.argument = argument
++        self.argument = None
+         self.result = 0
+ 
+     # set base number
+</pre><h3>Mutant 133</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -11,7 +11,7 @@
+ 
+         self.base = base
+         self.argument = argument
+-        self.result = 0
++        self.result = 1
+ 
+     # set base number
+     def set_base(self, base_num):
+</pre><h3>Mutant 134</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -11,7 +11,7 @@
+ 
+         self.base = base
+         self.argument = argument
+-        self.result = 0
++        self.result = None
+ 
+     # set base number
+     def set_base(self, base_num):
+</pre><h3>Mutant 139</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -19,7 +19,7 @@
+         if '/' in base_num:
+             try:
+                 num, den = base_num.split('/')
+-                self.base = float(num) / float(den)
++                self.base = float(num) * float(den)
+             except ZeroDivisionError:
+                 return None
+ 
+</pre><h3>Mutant 141</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -25,7 +25,7 @@
+ 
+         # set base to float of base_num if input is a number
+         else:
+-            self.base = float(base_num)
++            self.base = None
+ 
+         return self.base
+ 
+</pre><h3>Mutant 146</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -34,7 +34,7 @@
+         if '/' in arg_num:
+             try:
+                 num, den = arg_num.split('/')
+-                self.argument = float(num) / float(den)
++                self.argument = float(num) * float(den)
+             except ZeroDivisionError:
+                 return None
+ 
+</pre><h3>Mutant 149</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -47,7 +47,7 @@
+     # get the value of base number and argument
+     def set_values(self):
+         # check the validation of base number
+-        while True:
++        while False:
+             try:
+                 b_num = input("Please enter the value for b: ")
+                 if self.set_base(b_num) == 1:
+</pre><h3>Mutant 150</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -49,7 +49,7 @@
+         # check the validation of base number
+         while True:
+             try:
+-                b_num = input("Please enter the value for b: ")
++                b_num = input("XXPlease enter the value for b: XX")
+                 if self.set_base(b_num) == 1:
+                     raise exceptions.BaseNumError1
+                 elif self.set_base(b_num) is None:
+</pre><h3>Mutant 151</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -49,7 +49,7 @@
+         # check the validation of base number
+         while True:
+             try:
+-                b_num = input("Please enter the value for b: ")
++                b_num = None
+                 if self.set_base(b_num) == 1:
+                     raise exceptions.BaseNumError1
+                 elif self.set_base(b_num) is None:
+</pre><h3>Mutant 152</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -50,7 +50,7 @@
+         while True:
+             try:
+                 b_num = input("Please enter the value for b: ")
+-                if self.set_base(b_num) == 1:
++                if self.set_base(b_num) != 1:
+                     raise exceptions.BaseNumError1
+                 elif self.set_base(b_num) is None:
+                     raise exceptions.ZeroError
+</pre><h3>Mutant 153</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -50,7 +50,7 @@
+         while True:
+             try:
+                 b_num = input("Please enter the value for b: ")
+-                if self.set_base(b_num) == 1:
++                if self.set_base(b_num) == 2:
+                     raise exceptions.BaseNumError1
+                 elif self.set_base(b_num) is None:
+                     raise exceptions.ZeroError
+</pre><h3>Mutant 154</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -52,7 +52,7 @@
+                 b_num = input("Please enter the value for b: ")
+                 if self.set_base(b_num) == 1:
+                     raise exceptions.BaseNumError1
+-                elif self.set_base(b_num) is None:
++                elif self.set_base(b_num) is not None:
+                     raise exceptions.ZeroError
+                 elif self.base <= 0:
+                     raise exceptions.BaseNumError2
+</pre><h3>Mutant 155</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -54,7 +54,7 @@
+                     raise exceptions.BaseNumError1
+                 elif self.set_base(b_num) is None:
+                     raise exceptions.ZeroError
+-                elif self.base <= 0:
++                elif self.base < 0:
+                     raise exceptions.BaseNumError2
+                 break
+             except exceptions.BaseNumError1:
+</pre><h3>Mutant 156</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -54,7 +54,7 @@
+                     raise exceptions.BaseNumError1
+                 elif self.set_base(b_num) is None:
+                     raise exceptions.ZeroError
+-                elif self.base <= 0:
++                elif self.base <= 1:
+                     raise exceptions.BaseNumError2
+                 break
+             except exceptions.BaseNumError1:
+</pre><h3>Mutant 157</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -56,7 +56,7 @@
+                     raise exceptions.ZeroError
+                 elif self.base <= 0:
+                     raise exceptions.BaseNumError2
+-                break
++                continue
+             except exceptions.BaseNumError1:
+                 print("Logarithm with base of 1 is undefined. Please enter a valid number")
+             except exceptions.ZeroError:
+</pre><h3>Mutant 158</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -58,7 +58,7 @@
+                     raise exceptions.BaseNumError2
+                 break
+             except exceptions.BaseNumError1:
+-                print("Logarithm with base of 1 is undefined. Please enter a valid number")
++                print("XXLogarithm with base of 1 is undefined. Please enter a valid numberXX")
+             except exceptions.ZeroError:
+                 print("Can't divided by zero, please enter a valid denominator")
+             except exceptions.BaseNumError2:
+</pre><h3>Mutant 159</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -60,7 +60,7 @@
+             except exceptions.BaseNumError1:
+                 print("Logarithm with base of 1 is undefined. Please enter a valid number")
+             except exceptions.ZeroError:
+-                print("Can't divided by zero, please enter a valid denominator")
++                print("XXCan't divided by zero, please enter a valid denominatorXX")
+             except exceptions.BaseNumError2:
+                 print("Logarithm with non-positive base is undefined. Please enter a valid number")
+         self.set_base(b_num)
+</pre><h3>Mutant 160</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -62,7 +62,7 @@
+             except exceptions.ZeroError:
+                 print("Can't divided by zero, please enter a valid denominator")
+             except exceptions.BaseNumError2:
+-                print("Logarithm with non-positive base is undefined. Please enter a valid number")
++                print("XXLogarithm with non-positive base is undefined. Please enter a valid numberXX")
+         self.set_base(b_num)
+         # check the domain of argument
+         while True:
+</pre><h3>Mutant 161</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -65,7 +65,7 @@
+                 print("Logarithm with non-positive base is undefined. Please enter a valid number")
+         self.set_base(b_num)
+         # check the domain of argument
+-        while True:
++        while False:
+             try:
+                 arg_num = input("Please enter the value for x: ")
+                 if self.set_argument(arg_num) is None:
+</pre><h3>Mutant 162</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -67,7 +67,7 @@
+         # check the domain of argument
+         while True:
+             try:
+-                arg_num = input("Please enter the value for x: ")
++                arg_num = input("XXPlease enter the value for x: XX")
+                 if self.set_argument(arg_num) is None:
+                     raise exceptions.ZeroError
+                 elif self.set_argument(arg_num) <= 0:
+</pre><h3>Mutant 163</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -67,7 +67,7 @@
+         # check the domain of argument
+         while True:
+             try:
+-                arg_num = input("Please enter the value for x: ")
++                arg_num = None
+                 if self.set_argument(arg_num) is None:
+                     raise exceptions.ZeroError
+                 elif self.set_argument(arg_num) <= 0:
+</pre><h3>Mutant 164</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -68,7 +68,7 @@
+         while True:
+             try:
+                 arg_num = input("Please enter the value for x: ")
+-                if self.set_argument(arg_num) is None:
++                if self.set_argument(arg_num) is not None:
+                     raise exceptions.ZeroError
+                 elif self.set_argument(arg_num) <= 0:
+                     raise exceptions.ArgumentError
+</pre><h3>Mutant 165</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -70,7 +70,7 @@
+                 arg_num = input("Please enter the value for x: ")
+                 if self.set_argument(arg_num) is None:
+                     raise exceptions.ZeroError
+-                elif self.set_argument(arg_num) <= 0:
++                elif self.set_argument(arg_num) < 0:
+                     raise exceptions.ArgumentError
+                 break
+             except exceptions.ZeroError:
+</pre><h3>Mutant 166</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -70,7 +70,7 @@
+                 arg_num = input("Please enter the value for x: ")
+                 if self.set_argument(arg_num) is None:
+                     raise exceptions.ZeroError
+-                elif self.set_argument(arg_num) <= 0:
++                elif self.set_argument(arg_num) <= 1:
+                     raise exceptions.ArgumentError
+                 break
+             except exceptions.ZeroError:
+</pre><h3>Mutant 167</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -72,7 +72,7 @@
+                     raise exceptions.ZeroError
+                 elif self.set_argument(arg_num) <= 0:
+                     raise exceptions.ArgumentError
+-                break
++                continue
+             except exceptions.ZeroError:
+                 print("Can't divided by zero, please enter a valid denominator")
+             except exceptions.ArgumentError:
+</pre><h3>Mutant 168</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -74,7 +74,7 @@
+                     raise exceptions.ArgumentError
+                 break
+             except exceptions.ZeroError:
+-                print("Can't divided by zero, please enter a valid denominator")
++                print("XXCan't divided by zero, please enter a valid denominatorXX")
+             except exceptions.ArgumentError:
+                 print("Error: Illegal argument. Value not in domain. Please enter a valid number")
+         self.set_argument(arg_num)
+</pre><h3>Mutant 169</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -76,7 +76,7 @@
+             except exceptions.ZeroError:
+                 print("Can't divided by zero, please enter a valid denominator")
+             except exceptions.ArgumentError:
+-                print("Error: Illegal argument. Value not in domain. Please enter a valid number")
++                print("XXError: Illegal argument. Value not in domain. Please enter a valid numberXX")
+         self.set_argument(arg_num)
+         print("The function you entered is log(%s)(%s)" % (b_num, arg_num))
+ 
+</pre><h3>Mutant 170</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -78,7 +78,7 @@
+             except exceptions.ArgumentError:
+                 print("Error: Illegal argument. Value not in domain. Please enter a valid number")
+         self.set_argument(arg_num)
+-        print("The function you entered is log(%s)(%s)" % (b_num, arg_num))
++        print("XXThe function you entered is log(%s)(%s)XX" % (b_num, arg_num))
+ 
+     # Implementation of the natural logarithm function using the Taylor series expansion
+     # summation of ((-1) ** (i + 1)) * ((x - 1) ** i) / i
+</pre><h3>Mutant 171</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -78,7 +78,7 @@
+             except exceptions.ArgumentError:
+                 print("Error: Illegal argument. Value not in domain. Please enter a valid number")
+         self.set_argument(arg_num)
+-        print("The function you entered is log(%s)(%s)" % (b_num, arg_num))
++        print("The function you entered is log(%s)(%s)" / (b_num, arg_num))
+ 
+     # Implementation of the natural logarithm function using the Taylor series expansion
+     # summation of ((-1) ** (i + 1)) * ((x - 1) ** i) / i
+</pre><h3>Mutant 172</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -85,7 +85,7 @@
+     # for i = 1 to n
+     def ln_helper(self, x):
+ 
+-        if x >= 1:
++        if x > 1:
+             return self.ln_helper(x / 2) - self.ln_helper(0.5)  # ln(x) = ln(x*2 / 2) = ln(x*2) - ln(2)
+         elif x < 0.5:
+             return self.ln_helper(2 * x) + self.ln_helper(0.5)  # ln(x) = ln(x/2 * 2) = ln(x/2) + ln(2)
+</pre><h3>Mutant 173</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -85,7 +85,7 @@
+     # for i = 1 to n
+     def ln_helper(self, x):
+ 
+-        if x >= 1:
++        if x >= 2:
+             return self.ln_helper(x / 2) - self.ln_helper(0.5)  # ln(x) = ln(x*2 / 2) = ln(x*2) - ln(2)
+         elif x < 0.5:
+             return self.ln_helper(2 * x) + self.ln_helper(0.5)  # ln(x) = ln(x/2 * 2) = ln(x/2) + ln(2)
+</pre><h3>Mutant 181</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -88,7 +88,7 @@
+         if x >= 1:
+             return self.ln_helper(x / 2) - self.ln_helper(0.5)  # ln(x) = ln(x*2 / 2) = ln(x*2) - ln(2)
+         elif x < 0.5:
+-            return self.ln_helper(2 * x) + self.ln_helper(0.5)  # ln(x) = ln(x/2 * 2) = ln(x/2) + ln(2)
++            return self.ln_helper(2 / x) + self.ln_helper(0.5)  # ln(x) = ln(x/2 * 2) = ln(x/2) + ln(2)
+         n = 10000
+         s = 0
+         for i in range(1, n):
+</pre><h3>Mutant 182</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -88,7 +88,7 @@
+         if x >= 1:
+             return self.ln_helper(x / 2) - self.ln_helper(0.5)  # ln(x) = ln(x*2 / 2) = ln(x*2) - ln(2)
+         elif x < 0.5:
+-            return self.ln_helper(2 * x) + self.ln_helper(0.5)  # ln(x) = ln(x/2 * 2) = ln(x/2) + ln(2)
++            return self.ln_helper(2 * x) - self.ln_helper(0.5)  # ln(x) = ln(x/2 * 2) = ln(x/2) + ln(2)
+         n = 10000
+         s = 0
+         for i in range(1, n):
+</pre><h3>Mutant 184</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -89,7 +89,7 @@
+             return self.ln_helper(x / 2) - self.ln_helper(0.5)  # ln(x) = ln(x*2 / 2) = ln(x*2) - ln(2)
+         elif x < 0.5:
+             return self.ln_helper(2 * x) + self.ln_helper(0.5)  # ln(x) = ln(x/2 * 2) = ln(x/2) + ln(2)
+-        n = 10000
++        n = 10001
+         s = 0
+         for i in range(1, n):
+             s += ((-1) ** (i + 1)) * ((x - 1) ** i) / i
+</pre><h3>Mutant 190</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -92,7 +92,7 @@
+         n = 10000
+         s = 0
+         for i in range(1, n):
+-            s += ((-1) ** (i + 1)) * ((x - 1) ** i) / i
++            s -= ((-1) ** (i + 1)) * ((x - 1) ** i) / i
+         return s
+ 
+     # calculate the final result of log function by using logb(x) = ln(x) / ln(b)
+</pre><h3>Mutant 194</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -92,7 +92,7 @@
+         n = 10000
+         s = 0
+         for i in range(1, n):
+-            s += ((-1) ** (i + 1)) * ((x - 1) ** i) / i
++            s += ((-1) ** (i - 1)) * ((x - 1) ** i) / i
+         return s
+ 
+     # calculate the final result of log function by using logb(x) = ln(x) / ln(b)
+</pre><h3>Mutant 195</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -92,7 +92,7 @@
+         n = 10000
+         s = 0
+         for i in range(1, n):
+-            s += ((-1) ** (i + 1)) * ((x - 1) ** i) / i
++            s += ((-1) ** (i + 2)) * ((x - 1) ** i) / i
+         return s
+ 
+     # calculate the final result of log function by using logb(x) = ln(x) / ln(b)
+</pre><h3>Mutant 201</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -98,7 +98,7 @@
+     # calculate the final result of log function by using logb(x) = ln(x) / ln(b)
+     def cal_log(self):
+ 
+-        if self.argument > 0 and self.base > 0 and self.base != 1:
++        if self.argument >= 0 and self.base > 0 and self.base != 1:
+             self.result = self.ln_helper(self.argument) / self.ln_helper(self.base)
+         return self.result
+ 
+</pre><h3>Mutant 202</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -98,7 +98,7 @@
+     # calculate the final result of log function by using logb(x) = ln(x) / ln(b)
+     def cal_log(self):
+ 
+-        if self.argument > 0 and self.base > 0 and self.base != 1:
++        if self.argument > 1 and self.base > 0 and self.base != 1:
+             self.result = self.ln_helper(self.argument) / self.ln_helper(self.base)
+         return self.result
+ 
+</pre><h3>Mutant 203</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -98,7 +98,7 @@
+     # calculate the final result of log function by using logb(x) = ln(x) / ln(b)
+     def cal_log(self):
+ 
+-        if self.argument > 0 and self.base > 0 and self.base != 1:
++        if self.argument > 0 and self.base >= 0 and self.base != 1:
+             self.result = self.ln_helper(self.argument) / self.ln_helper(self.base)
+         return self.result
+ 
+</pre><h3>Mutant 206</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -98,7 +98,7 @@
+     # calculate the final result of log function by using logb(x) = ln(x) / ln(b)
+     def cal_log(self):
+ 
+-        if self.argument > 0 and self.base > 0 and self.base != 1:
++        if self.argument > 0 and self.base > 0 and self.base != 2:
+             self.result = self.ln_helper(self.argument) / self.ln_helper(self.base)
+         return self.result
+ 
+</pre><h3>Mutant 207</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -98,7 +98,7 @@
+     # calculate the final result of log function by using logb(x) = ln(x) / ln(b)
+     def cal_log(self):
+ 
+-        if self.argument > 0 and self.base > 0 and self.base != 1:
++        if self.argument > 0 or self.base > 0 and self.base != 1:
+             self.result = self.ln_helper(self.argument) / self.ln_helper(self.base)
+         return self.result
+ 
+</pre><h2>Suspicious</h2>Mutants that made the test suite take longer, but otherwise seemed ok<h3>Mutant 174</h3><pre>--- ./src/log.py
++++ ./src/log.py
+@@ -86,7 +86,7 @@
+     def ln_helper(self, x):
+ 
+         if x >= 1:
+-            return self.ln_helper(x / 2) - self.ln_helper(0.5)  # ln(x) = ln(x*2 / 2) = ln(x*2) - ln(2)
++            return self.ln_helper(x * 2) - self.ln_helper(0.5)  # ln(x) = ln(x*2 / 2) = ln(x*2) - ln(2)
+         elif x < 0.5:
+             return self.ln_helper(2 * x) + self.ln_helper(0.5)  # ln(x) = ln(x/2 * 2) = ln(x/2) + ln(2)
+         n = 10000
+</pre></body></html>

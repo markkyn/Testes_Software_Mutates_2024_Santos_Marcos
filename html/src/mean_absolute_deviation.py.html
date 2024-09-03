@@ -1,0 +1,133 @@
+<html><body><h1>./src/mean_absolute_deviation.py</h1>Killed 23 out of 35 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 212</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -9,7 +9,7 @@
+     def __init__(self, values):
+         self._values = values
+         if not values:
+-            self._mean = 0
++            self._mean = 1
+             self._mad = 0
+         else:
+             self._mean = self.__calculate_mean(self._values)
+</pre><h3>Mutant 213</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -9,7 +9,7 @@
+     def __init__(self, values):
+         self._values = values
+         if not values:
+-            self._mean = 0
++            self._mean = None
+             self._mad = 0
+         else:
+             self._mean = self.__calculate_mean(self._values)
+</pre><h3>Mutant 214</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -10,7 +10,7 @@
+         self._values = values
+         if not values:
+             self._mean = 0
+-            self._mad = 0
++            self._mad = 1
+         else:
+             self._mean = self.__calculate_mean(self._values)
+             self._mad = self.calculate_mad()
+</pre><h3>Mutant 215</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -10,7 +10,7 @@
+         self._values = values
+         if not values:
+             self._mean = 0
+-            self._mad = 0
++            self._mad = None
+         else:
+             self._mean = self.__calculate_mean(self._values)
+             self._mad = self.calculate_mad()
+</pre><h3>Mutant 216</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -12,7 +12,7 @@
+             self._mean = 0
+             self._mad = 0
+         else:
+-            self._mean = self.__calculate_mean(self._values)
++            self._mean = None
+             self._mad = self.calculate_mad()
+ 
+ 
+</pre><h3>Mutant 225</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -33,7 +33,7 @@
+     def calculate_mad(self):
+         # Error handling
+         if not self._values:
+-            return 0
++            return 1
+         
+         num_of_vals = len(self._values)
+ 
+</pre><h3>Mutant 230</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -42,7 +42,7 @@
+ 
+         # Calculate MAD
+         total = 0
+-        diff = 0
++        diff = 1
+         # Calculate the sum of the differences
+         for val in list(self._values):
+             diff = val - self._mean
+</pre><h3>Mutant 231</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -42,7 +42,7 @@
+ 
+         # Calculate MAD
+         total = 0
+-        diff = 0
++        diff = None
+         # Calculate the sum of the differences
+         for val in list(self._values):
+             diff = val - self._mean
+</pre><h3>Mutant 234</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -46,7 +46,7 @@
+         # Calculate the sum of the differences
+         for val in list(self._values):
+             diff = val - self._mean
+-            if diff < 0:
++            if diff <= 0:
+                 diff *= (-1)
+             total += diff
+         self._mad = total / num_of_vals
+</pre><h3>Mutant 235</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -46,7 +46,7 @@
+         # Calculate the sum of the differences
+         for val in list(self._values):
+             diff = val - self._mean
+-            if diff < 0:
++            if diff < 1:
+                 diff *= (-1)
+             total += diff
+         self._mad = total / num_of_vals
+</pre><h3>Mutant 237</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -47,7 +47,7 @@
+         for val in list(self._values):
+             diff = val - self._mean
+             if diff < 0:
+-                diff *= (-1)
++                diff /= (-1)
+             total += diff
+         self._mad = total / num_of_vals
+ 
+</pre><h3>Mutant 244</h3><pre>--- ./src/mean_absolute_deviation.py
++++ ./src/mean_absolute_deviation.py
+@@ -68,7 +68,7 @@
+     # Resets the instanced value list
+     # Does not change the previously calculated MAD or mean
+     def set_values(self, new_values):
+-        self._values = new_values
++        self._values = None
+ 
+     # Returns the instanced value list
+     def get_values(self):
+</pre></body></html>

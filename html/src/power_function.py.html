@@ -1,0 +1,283 @@
+<html><body><h1>./src/power_function.py</h1>Killed 5 out of 32 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 410</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -4,7 +4,7 @@
+     def set_base(self, base): 
+         # Check if the base is a real number
+         # If yes, separate both nums/denum of the fraction and return value
+-        if("/" in str(base)):
++        if("XX/XX" in str(base)):
+             try:
+                 numerator = base[0:base.index('/')]
+                 denumerator = base[base.index('/') + 1:]
+</pre><h3>Mutant 412</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -6,7 +6,7 @@
+         # If yes, separate both nums/denum of the fraction and return value
+         if("/" in str(base)):
+             try:
+-                numerator = base[0:base.index('/')]
++                numerator = base[1:base.index('/')]
+                 denumerator = base[base.index('/') + 1:]
+                 self.base = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+</pre><h3>Mutant 413</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -6,7 +6,7 @@
+         # If yes, separate both nums/denum of the fraction and return value
+         if("/" in str(base)):
+             try:
+-                numerator = base[0:base.index('/')]
++                numerator = base[0:base.index('XX/XX')]
+                 denumerator = base[base.index('/') + 1:]
+                 self.base = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+</pre><h3>Mutant 414</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -6,7 +6,7 @@
+         # If yes, separate both nums/denum of the fraction and return value
+         if("/" in str(base)):
+             try:
+-                numerator = base[0:base.index('/')]
++                numerator = None
+                 denumerator = base[base.index('/') + 1:]
+                 self.base = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+</pre><h3>Mutant 415</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -7,7 +7,7 @@
+         if("/" in str(base)):
+             try:
+                 numerator = base[0:base.index('/')]
+-                denumerator = base[base.index('/') + 1:]
++                denumerator = base[base.index('XX/XX') + 1:]
+                 self.base = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+</pre><h3>Mutant 416</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -7,7 +7,7 @@
+         if("/" in str(base)):
+             try:
+                 numerator = base[0:base.index('/')]
+-                denumerator = base[base.index('/') + 1:]
++                denumerator = base[base.index('/') - 1:]
+                 self.base = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+</pre><h3>Mutant 417</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -7,7 +7,7 @@
+         if("/" in str(base)):
+             try:
+                 numerator = base[0:base.index('/')]
+-                denumerator = base[base.index('/') + 1:]
++                denumerator = base[base.index('/') + 2:]
+                 self.base = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+</pre><h3>Mutant 418</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -7,7 +7,7 @@
+         if("/" in str(base)):
+             try:
+                 numerator = base[0:base.index('/')]
+-                denumerator = base[base.index('/') + 1:]
++                denumerator = None
+                 self.base = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+</pre><h3>Mutant 419</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -8,7 +8,7 @@
+             try:
+                 numerator = base[0:base.index('/')]
+                 denumerator = base[base.index('/') + 1:]
+-                self.base = float(numerator)/float(denumerator)
++                self.base = float(numerator)*float(denumerator)
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+         else:
+</pre><h3>Mutant 420</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -8,7 +8,7 @@
+             try:
+                 numerator = base[0:base.index('/')]
+                 denumerator = base[base.index('/') + 1:]
+-                self.base = float(numerator)/float(denumerator)
++                self.base = None
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+         else:
+</pre><h3>Mutant 421</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -10,7 +10,7 @@
+                 denumerator = base[base.index('/') + 1:]
+                 self.base = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+-                print("Can't do division by zero!")
++                print("XXCan't do division by zero!XX")
+         else:
+             self.base = float(base)
+ 
+</pre><h3>Mutant 423</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -19,7 +19,7 @@
+     def set_exponent(self, exponent):
+         # Check if the exponent is a real number
+         # If yes, separate both nums/denum of the fraction and return value
+-        if("/" in str(exponent)):
++        if("XX/XX" in str(exponent)):
+             try:
+                 numerator = exponent[0:exponent.index('/')]
+                 denumerator = exponent[exponent.index('/') + 1:]
+</pre><h3>Mutant 425</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -21,7 +21,7 @@
+         # If yes, separate both nums/denum of the fraction and return value
+         if("/" in str(exponent)):
+             try:
+-                numerator = exponent[0:exponent.index('/')]
++                numerator = exponent[1:exponent.index('/')]
+                 denumerator = exponent[exponent.index('/') + 1:]
+                 self.exponent = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+</pre><h3>Mutant 426</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -21,7 +21,7 @@
+         # If yes, separate both nums/denum of the fraction and return value
+         if("/" in str(exponent)):
+             try:
+-                numerator = exponent[0:exponent.index('/')]
++                numerator = exponent[0:exponent.index('XX/XX')]
+                 denumerator = exponent[exponent.index('/') + 1:]
+                 self.exponent = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+</pre><h3>Mutant 427</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -21,7 +21,7 @@
+         # If yes, separate both nums/denum of the fraction and return value
+         if("/" in str(exponent)):
+             try:
+-                numerator = exponent[0:exponent.index('/')]
++                numerator = None
+                 denumerator = exponent[exponent.index('/') + 1:]
+                 self.exponent = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+</pre><h3>Mutant 428</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -22,7 +22,7 @@
+         if("/" in str(exponent)):
+             try:
+                 numerator = exponent[0:exponent.index('/')]
+-                denumerator = exponent[exponent.index('/') + 1:]
++                denumerator = exponent[exponent.index('XX/XX') + 1:]
+                 self.exponent = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+</pre><h3>Mutant 429</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -22,7 +22,7 @@
+         if("/" in str(exponent)):
+             try:
+                 numerator = exponent[0:exponent.index('/')]
+-                denumerator = exponent[exponent.index('/') + 1:]
++                denumerator = exponent[exponent.index('/') - 1:]
+                 self.exponent = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+</pre><h3>Mutant 430</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -22,7 +22,7 @@
+         if("/" in str(exponent)):
+             try:
+                 numerator = exponent[0:exponent.index('/')]
+-                denumerator = exponent[exponent.index('/') + 1:]
++                denumerator = exponent[exponent.index('/') + 2:]
+                 self.exponent = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+</pre><h3>Mutant 431</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -22,7 +22,7 @@
+         if("/" in str(exponent)):
+             try:
+                 numerator = exponent[0:exponent.index('/')]
+-                denumerator = exponent[exponent.index('/') + 1:]
++                denumerator = None
+                 self.exponent = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+</pre><h3>Mutant 432</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -23,7 +23,7 @@
+             try:
+                 numerator = exponent[0:exponent.index('/')]
+                 denumerator = exponent[exponent.index('/') + 1:]
+-                self.exponent = float(numerator)/float(denumerator)
++                self.exponent = float(numerator)*float(denumerator)
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+         else:
+</pre><h3>Mutant 433</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -23,7 +23,7 @@
+             try:
+                 numerator = exponent[0:exponent.index('/')]
+                 denumerator = exponent[exponent.index('/') + 1:]
+-                self.exponent = float(numerator)/float(denumerator)
++                self.exponent = None
+             except ZeroDivisionError: 
+                 print("Can't do division by zero!")
+         else:
+</pre><h3>Mutant 434</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -25,7 +25,7 @@
+                 denumerator = exponent[exponent.index('/') + 1:]
+                 self.exponent = float(numerator)/float(denumerator)
+             except ZeroDivisionError: 
+-                print("Can't do division by zero!")
++                print("XXCan't do division by zero!XX")
+         else:
+             self.exponent = float(exponent)
+     #PowerFunction parameters:
+</pre><h3>Mutant 437</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -41,4 +41,4 @@
+ 
+     # Printing the base and exponent
+     def __str__(self):
+-        return ("Base: " + str(self.base) + " Exponent: " + str(self.exponent))
++        return ("XXBase: XX" + str(self.base) + " Exponent: " + str(self.exponent))
+</pre><h3>Mutant 438</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -41,4 +41,4 @@
+ 
+     # Printing the base and exponent
+     def __str__(self):
+-        return ("Base: " + str(self.base) + " Exponent: " + str(self.exponent))
++        return ("Base: " - str(self.base) + " Exponent: " + str(self.exponent))
+</pre><h3>Mutant 439</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -41,4 +41,4 @@
+ 
+     # Printing the base and exponent
+     def __str__(self):
+-        return ("Base: " + str(self.base) + " Exponent: " + str(self.exponent))
++        return ("Base: " + str(self.base) - " Exponent: " + str(self.exponent))
+</pre><h3>Mutant 440</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -41,4 +41,4 @@
+ 
+     # Printing the base and exponent
+     def __str__(self):
+-        return ("Base: " + str(self.base) + " Exponent: " + str(self.exponent))
++        return ("Base: " + str(self.base) + "XX Exponent: XX" + str(self.exponent))
+</pre><h3>Mutant 441</h3><pre>--- ./src/power_function.py
++++ ./src/power_function.py
+@@ -41,4 +41,4 @@
+ 
+     # Printing the base and exponent
+     def __str__(self):
+-        return ("Base: " + str(self.base) + " Exponent: " + str(self.exponent))
++        return ("Base: " + str(self.base) + " Exponent: " - str(self.exponent))
+</pre></body></html>
