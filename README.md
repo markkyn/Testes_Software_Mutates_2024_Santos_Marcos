@@ -152,4 +152,42 @@ mutmut html
 Esse comando irá gerar uma pasta `html` contendo o `index.html` da aplicação, abra utilizando seu navegador
 ![alt text](image-2.png)
 
-## Ajustes
+dos 520 mutantes criados 152 foram eliminados.
+
+Você consegue ver com mais detalhes no `index.html` de cada modulo. Como por exemplo do coseno inverso. (mais pra frente sera abordado um caso de teste adicional para ele)
+
+![alt text](image-8.png)
+
+## Novos Casos de Teste
+
+### Log negativo
+Para incluir novos testes podemos criar casos que não são abordados nos testes matemáticos do projeto, como por exemplo testar como o projeto se comporta com valores negativos.
+
+“log de número negativo em qualquer base não existe ( Indeterminação )”
+
+![alt text](image-4.png)
+
+Ao incluir esse caso de teste podemos executá-lo com ‘pytest tests’
+
+![alt text](image-3.png)
+
+Perceba que o teste falhou, ou seja, o código não considerou a possibilidade de log negativo, retornando 0 em seu lugar.
+
+
+### Dominio de coseno inverso
+
+Vamos criar outro teste, dessa vez com o coseno inverso
+
+O coseno tem inverso domínio de [-1, 1]
+
+![alt text](image-6.png)
+
+vamos codar o teste
+
+![alt text](image-5.png)
+
+e para executar o teste executamos o 'pytest tests'
+
+![alt text](image-7.png)
+
+Assim como o esperado, o teste passou , ou seja, a calculadora prevê uma excesão para quando o está fora do  dominio; 
