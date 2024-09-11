@@ -21,6 +21,11 @@ function2.set_base("1/3")
 function2.set_argument("1/2")
 answer2 = function2.cal_log()
 
+function3 = LogFunction(0, 0)
+function3.set_base("10")
+function3.set_argument("-100")
+answer3 = function3.cal_log()
+
 
 # Unit test
 def test_log_answer1():
@@ -33,4 +38,5 @@ def test_log_answer2():
 
 print("The answer for log(1/2)(100) is %.10f" % answer1)
 print("The answer for log(1/3)(1/2) is %.10f" % answer2)
+print("The answer for log(10)(-100) is %.10f" % answer3)
 

@@ -13,7 +13,7 @@ x_over.set_values('3')
 
 def test_indeterminacao():
     try:
-        x_over.calculate_acos()
+        assert(x_over.calculate_acos() == None)
     except ValueError:
         print("Indeterminação de valores")
 
